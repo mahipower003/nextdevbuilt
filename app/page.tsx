@@ -90,9 +90,13 @@ export default function HomePage() {
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Full-stack development, cloud solutions, and specialized LIC calculators. 
               We transform your ideas into powerful, scalable applications.
-            </p>
+            </p>{/*
+            <!-- Start of Meetings Embed Script -->
+            <div class="meetings-iframe-container" data-src="https://meetings-na2.hubspot.com/mahesh-chaubey?embed=true"></div>
+            <script type="text/javascript" src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"></script>
+            <!-- End of Meetings Embed Script -->*/}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link href="/contact">
+              <Link href="https://meetings-na2.hubspot.com/mahesh-chaubey?embed=true">
                 <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transform hover:scale-105 transition-all duration-200 shadow-2xl group">
                   Book A Meeting
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
