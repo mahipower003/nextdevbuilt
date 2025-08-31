@@ -92,15 +92,16 @@ export default function HomePage() {
               We transform your ideas into powerful, scalable applications.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link href="/services">
+              <Link href="/contact">
                 <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transform hover:scale-105 transition-all duration-200 shadow-2xl group">
-                  Explore Our Services
+                  Book A Meeting
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
                 </Button>
               </Link>
-              <Link href="/calculators">
-                <Button variant="outline" size="lg" className="border-2 border-white/30 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold backdrop-blur-sm">
-                  Try LIC Calculators
+              <Link href="/services">
+                <Button variant="outline" size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transform hover:scale-105 transition-all duration-200 shadow-2xl group">
+                  Explore Our Services
+                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
                 </Button>
               </Link>
             </div>
@@ -218,40 +219,6 @@ export default function HomePage() {
             <Link href="/services">
               <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transform hover:scale-105 transition-all duration-200 shadow-xl group">
                 View All Services
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
-              </Button>
-            </Link>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* LIC Calculators CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-10 w-40 h-40 bg-white rounded-full filter blur-3xl"></div>
-          <div className="absolute bottom-20 right-10 w-60 h-60 bg-purple-300 rounded-full filter blur-3xl"></div>
-        </div>
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <div className="w-20 h-20 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-8 shadow-2xl">
-              <Calculator className="w-10 h-10 text-white" />
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              LIC Insurance Calculators
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Comprehensive suite of LIC policy calculators to help you make informed insurance decisions. 
-              Calculate premiums, maturity amounts, and compare different policy options.
-            </p>
-            <Link href="/calculators">
-              <Button size="lg" variant="outline" className="border-2 border-white/30 text-white hover:bg-white hover:text-purple-700 px-8 py-4 rounded-xl font-semibold backdrop-blur-sm transform hover:scale-105 transition-all duration-200 group">
-                Explore Calculators
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
               </Button>
             </Link>

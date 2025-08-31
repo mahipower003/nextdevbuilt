@@ -5,11 +5,13 @@ import { Code, Server, Cloud, Database, CheckCircle, ArrowRight } from 'lucide-r
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const services = [
   {
     id: 'react',
     icon: Code,
+    image: '/images/react-development.svg',
     title: 'React/Next.js Frontend Development',
     description: 'Modern, responsive web applications built with cutting-edge React and Next.js technologies.',
     color: 'from-blue-500 to-cyan-500',
@@ -26,6 +28,7 @@ const services = [
   {
     id: 'java',
     icon: Server,
+    image: '/images/java-spring.svg',
     title: 'Java/Spring Boot Backend Development',
     description: 'Scalable, secure backend services using enterprise-grade Java and Spring Boot framework.',
     color: 'from-green-500 to-emerald-500',
@@ -42,6 +45,7 @@ const services = [
   {
     id: 'aws',
     icon: Cloud,
+    image: '/images/aws-cloud.svg',
     title: 'AWS Cloud Solutions',
     description: 'Complete cloud infrastructure setup and management for scalable, reliable applications.',
     color: 'from-orange-500 to-red-500',
@@ -58,6 +62,7 @@ const services = [
   {
     id: 'data',
     icon: Database,
+    image: '/images/data-analytics.svg',
     title: 'Data Engineering & Analytics',
     description: 'Advanced data processing, analytics, and business intelligence solutions.',
     color: 'from-purple-500 to-pink-500',
@@ -185,7 +190,13 @@ export default function ServicesPage() {
                   <div className={`${!isEven ? 'lg:col-start-1' : ''} relative`}>
                     <Card className="p-8 bg-white/80 backdrop-blur-sm border-0 shadow-2xl">
                       <div className="aspect-square bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl flex items-center justify-center">
-                        <Icon className={`w-24 h-24 bg-gradient-to-br ${service.color} text-transparent bg-clip-text`} />
+                        <Image 
+                          src={service.image} 
+                          alt={service.title}
+                          width={180}
+                          height={180}
+                          className="w-full h-full p-2"
+                        />
                       </div>
                     </Card>
                   </div>
@@ -217,9 +228,9 @@ export default function ServicesPage() {
                   Start Your Project
                 </Button>
               </Link>
-              <Link href="/calculators">
+              <Link href="/about">
                 <Button variant="outline" size="lg" className="border-2 border-purple-200 text-purple-700 hover:bg-purple-50 px-8 py-4 rounded-xl font-semibold">
-                  Try Our Calculators
+                  About Us
                 </Button>
               </Link>
             </div>

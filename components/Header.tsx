@@ -3,13 +3,12 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Menu, X, Code, Calculator, Mail, Info, Briefcase } from 'lucide-react';
+import { Menu, X, Code, Mail, Info, Briefcase } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const navigation = [
   { name: 'Home', href: '/', icon: Code },
   { name: 'Services', href: '/services', icon: Briefcase },
-  { name: 'Calculators', href: '/calculators', icon: Calculator },
   { name: 'About', href: '/about', icon: Info },
   { name: 'Contact', href: '/contact', icon: Mail },
 ];
