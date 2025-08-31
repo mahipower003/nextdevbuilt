@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     template: '%s | NextDevBuild'
   },
   description: 'Professional IT services including React/Next.js development, Java/Spring Boot backends, AWS cloud solutions, and specialized LIC insurance calculators.',
-  keywords: 'Next.js development, React development, Java Spring Boot, AWS services, IT consulting, LIC calculators, web development',
+  keywords: 'Next.js development, React development, Java Spring Boot, AWS services, IT consulting, web development',
   authors: [{ name: 'NextDevBuild Team' }],
   creator: 'NextDevBuild',
   publisher: 'NextDevBuild',

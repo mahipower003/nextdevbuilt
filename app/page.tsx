@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { ArrowRight, Code, Server, Cloud, Database, Calculator, Users, Award, Zap } from 'lucide-react';
+import {ArrowRight, Code, Server, Cloud, Database, Calculator, Users, Award, Zap, Vault} from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
@@ -34,10 +34,10 @@ const services = [
 ];
 
 const stats = [
-  { icon: Users, value: '50+', label: 'Happy Clients' },
-  { icon: Award, value: '100+', label: 'Projects Completed' },
+  { icon: Users, value: '26+', label: 'Happy Clients' },
+  { icon: Award, value: '58+', label: 'Projects Completed' },
   { icon: Zap, value: '99%', label: 'Client Satisfaction' },
-  { icon: Calculator, value: '15+', label: 'LIC Calculators' },
+  { icon: Vault, value: '70%', label: 'Lowest Market Fee' },
 ];
 
 const containerVariants = {
@@ -105,6 +105,7 @@ export default function HomePage() {
                 </Button>
               </Link>
             </div>
+            <script type="text/javascript" id="hs-script-loader" async defer src="//js-na2.hs-scripts.com/243746156.js"></script>
           </motion.div>
         </div>
 
