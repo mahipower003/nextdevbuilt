@@ -11,7 +11,7 @@ const services = [
   {
     id: 'react',
     icon: Code,
-    image: '/images/react-development.svg',
+    image: '/images/fullstackapp.png',
     title: 'React/Next.js Frontend Development',
     description: 'Modern, responsive web applications built with cutting-edge React and Next.js technologies.',
     color: 'from-blue-500 to-cyan-500',
@@ -28,7 +28,7 @@ const services = [
   {
     id: 'java',
     icon: Server,
-    image: '/images/java-spring.svg',
+    image: '/images/backendservice.png',
     title: 'Java/Spring Boot Backend Development',
     description: 'Scalable, secure backend services using enterprise-grade Java and Spring Boot framework.',
     color: 'from-green-500 to-emerald-500',
@@ -45,7 +45,7 @@ const services = [
   {
     id: 'aws',
     icon: Cloud,
-    image: '/images/aws-cloud.svg',
+    image: '/images/cloudsolution.png',
     title: 'AWS Cloud Solutions',
     description: 'Complete cloud infrastructure setup and management for scalable, reliable applications.',
     color: 'from-orange-500 to-red-500',
@@ -62,7 +62,7 @@ const services = [
   {
     id: 'data',
     icon: Database,
-    image: '/images/data-analytics.svg',
+    image: '/images/dataanalytics.png',
     title: 'Data Engineering & Analytics',
     description: 'Advanced data processing, analytics, and business intelligence solutions.',
     color: 'from-purple-500 to-pink-500',
