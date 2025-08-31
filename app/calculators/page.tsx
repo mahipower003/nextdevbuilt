@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { Calculator, TrendingUp, PieChart, BarChart3, Target, Shield, Award, DollarSign } from 'lucide-react';
+import {Calculator, TrendingUp, PieChart, BarChart3, Target, Shield, Award, DollarSign, ArrowRight} from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 

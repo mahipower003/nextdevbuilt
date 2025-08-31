@@ -3,6 +3,8 @@
 import { motion } from 'framer-motion';
 import { Users, Target, Award, Lightbulb, Code, Server, Cloud, Database } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import Link from "next/link";
+import { Button } from '@/components/ui/button';
 
 const values = [
   {
@@ -226,7 +228,7 @@ export default function AboutPage() {
               Ready to start your next project? We'd love to hear about your ideas and discuss how we can help bring them to life.
             </p>
             <Link href="/contact">
-              <Button size="lg" variant="outline" className="border-2 border-white/30 text-white hover:bg-white hover:text-purple-700 px-8 py-4 rounded-xl font-semibold backdrop-blur-sm transform hover:scale-105 transition-all duration-200">
+              <Button className="border-2 border-white/30 text-white hover:bg-white hover:text-purple-700 px-8 py-4 rounded-xl font-semibold backdrop-blur-sm transform hover:scale-105 transition-all duration-200">
                 Get in Touch
               </Button>
             </Link>

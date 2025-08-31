@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
+  // Removing static export to allow dynamic routes to work properly
   eslint: {
     ignoreDuringBuilds: true,
   },
