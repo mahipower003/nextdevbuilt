@@ -53,16 +53,23 @@ export default function ContactPage() {
 
   const onSubmit = async (data: ContactForm) => {
     setIsLoading(true);
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    console.log('Form submitted:', data);
-    setIsSubmitted(true);
+
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
+
+    if (res.ok) {
+      setIsSubmitted(true);
+      reset();
+      setTimeout(() => setIsSubmitted(false), 5000);
+    } else {
+      alert("❌ Failed to send message. Please try again.");
+    }
     setIsLoading(false);
-    reset();
-    
-    // Reset success message after 5 seconds
-    setTimeout(() => setIsSubmitted(false), 5000);
   };
+
 
   return (
     <div className="min-h-screen pt-16">

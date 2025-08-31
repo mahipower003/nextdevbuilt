@@ -12,7 +12,7 @@ const services = [
     id: 'react',
     icon: Code,
     image: '/images/fullstackapp.png',
-    title: 'React/Next.js Frontend Development',
+    title: 'Frontend Application Development',
     description: 'Modern, responsive web applications built with cutting-edge React and Next.js technologies.',
     color: 'from-blue-500 to-cyan-500',
     features: [
@@ -29,7 +29,7 @@ const services = [
     id: 'java',
     icon: Server,
     image: '/images/backendservice.png',
-    title: 'Java/Spring Boot Backend Development',
+    title: 'Backend Application Development',
     description: 'Scalable, secure backend services using enterprise-grade Java and Spring Boot framework.',
     color: 'from-green-500 to-emerald-500',
     features: [
