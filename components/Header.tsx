@@ -77,7 +77,7 @@ export default function Header() {
               href="/discuss"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-amber-600 to-orange-700 hover:from-amber-500 hover:to-orange-600 text-white text-[13.5px] font-semibold px-5 py-2.5 rounded-lg transition-all duration-200 hover:shadow-lg hover:shadow-amber-500/25 hover:-translate-y-px"
             >
-              Discuss Your Business
+              Discuss a Workflow
               <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           </div>
@@ -123,7 +123,7 @@ export default function Header() {
                   href="/discuss"
                   className="flex items-center justify-center gap-2 w-full bg-gradient-to-r from-amber-600 to-orange-700 text-white text-[14px] font-semibold py-3 rounded-lg"
                 >
-                  Discuss Your Business
+                  Discuss a Workflow
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>

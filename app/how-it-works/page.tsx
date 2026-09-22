@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
@@ -71,7 +71,7 @@ export default function HowItWorksPage() {
                 className="relative"
               >
                 {/* Timeline Dot */}
-                <div className="absolute -left-[58px] md:-left-[74px] top-1 w-12 h-12 bg-[#13131F] border-2 border-amber-500 rounded-full flex items-center justify-center font-display font-bold text-amber-400 z-10 shadow-[0_0_15px_rgba(99,102,241,0.2)]">
+                <div className="absolute -left-[58px] md:-left-[74px] top-1 w-12 h-12 bg-[#13131F] border-2 border-amber-500 rounded-full flex items-center justify-center font-display font-bold text-amber-400 z-10 shadow-[0_0_15px_rgba(217,119,6,0.2)]">
                   {stage.num}
                 </div>
                 

@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
@@ -43,11 +43,26 @@ export default function WorkPage() {
                   </span>
                 </div>
                 
-                <p className="text-[11px] font-bold uppercase tracking-[0.15em] text-[#52526E] mb-6">Financial Technology</p>
+                <p className="text-[11px] font-bold uppercase tracking-[0.15em] text-[#52526E] mb-4">Financial Technology</p>
                 
-                <p className="text-[#8B8BAD] text-lg leading-relaxed mb-10">
-                  Financial technology platform providing financial calculators and tools for Indian consumers. Built to help individuals understand financial products, compare options and make informed decisions.
+                <p className="text-[#8B8BAD] text-lg leading-relaxed mb-6">
+                  Financial technology platform providing tools and financial insights for Indian consumers.
                 </p>
+
+                <ul className="space-y-2 mb-8 text-[#8B8BAD] text-sm">
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
+                    Multi-language financial calculators
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
+                    Financial calculation engine
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
+                    SEO/content-driven consumer platform
+                  </li>
+                </ul>
                 
                 <div>
                   <a 
@@ -56,7 +71,7 @@ export default function WorkPage() {
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 bg-transparent border border-[#1C1C2E] hover:border-amber-500/30 text-white font-medium px-6 py-3 rounded-lg transition-all duration-200 group-hover:bg-[#17172A]"
                   >
-                    Visit BharatSaver
+                    View Live Project
                     <ExternalLink className="w-4 h-4 text-amber-400" />
                   </a>
                 </div>

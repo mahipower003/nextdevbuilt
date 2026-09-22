@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import Link from 'next/link';
 import { Linkedin, Mail, Phone, MapPin } from 'lucide-react';
@@ -13,7 +13,7 @@ const solutions = [
 
 const company = [
   { name: 'About', href: '/about' },
-  { name: 'Discuss Your Business', href: '/discuss' },
+  { name: 'Discuss a Workflow', href: '/discuss' },
   { name: 'Privacy Policy', href: '/privacy' },
   { name: 'Terms of Service', href: '/terms' },
 ];

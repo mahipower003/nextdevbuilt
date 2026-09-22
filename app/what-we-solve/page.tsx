@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
@@ -116,7 +116,7 @@ export default function WhatWeSolvePage() {
               href="/discuss"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-amber-600 to-orange-700 hover:from-amber-500 hover:to-orange-600 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-200 hover:shadow-lg hover:shadow-amber-500/25 hover:-translate-y-px"
             >
-              Discuss Your Business
+              Discuss a Workflow
               <ArrowRight className="w-5 h-5" />
             </Link>
           </motion.div>

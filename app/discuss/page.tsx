@@ -162,6 +162,42 @@ export default function DiscussPage() {
           <p className="text-[#52526E] italic text-sm">
             No sales pitch. No technical jargon. Just tell us what your team does manually.
           </p>
+
+          {/* Two Paths Selection */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto mt-8 text-left">
+            <a
+              href="https://calendar.app.google/MLAfP4WQRKfpMoWv6"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#13131F] border border-amber-500/30 hover:border-amber-500 p-5 rounded-xl transition-all duration-200 group flex flex-col justify-between hover:shadow-lg hover:shadow-amber-500/10"
+            >
+              <div>
+                <span className="text-[10px] font-bold uppercase tracking-wider text-amber-400 block mb-1">
+                  Option A — Low Friction
+                </span>
+                <h3 className="text-white font-bold text-base mb-1 group-hover:text-amber-300 transition-colors flex items-center gap-1.5">
+                  Book a 30-Minute Call <ArrowRight className="w-4 h-4 text-amber-400" />
+                </h3>
+                <p className="text-[#8B8BAD] text-xs leading-relaxed">
+                  30-Minute Business Workflow Discovery call via Google Calendar.
+                </p>
+              </div>
+            </a>
+
+            <div className="bg-[#13131F] border border-[#1C1C2E] p-5 rounded-xl flex flex-col justify-between">
+              <div>
+                <span className="text-[10px] font-bold uppercase tracking-wider text-[#8B8BAD] block mb-1">
+                  Option B — Detailed
+                </span>
+                <h3 className="text-white font-bold text-base mb-1">
+                  Describe Your Workflow
+                </h3>
+                <p className="text-[#8B8BAD] text-xs leading-relaxed">
+                  Complete the 6-step assessment below for an async evaluation.
+                </p>
+              </div>
+            </div>
+          </div>
         </motion.div>
       </section>
 

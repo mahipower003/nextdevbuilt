@@ -10,7 +10,9 @@ import {
   UserCheck,
   CheckSquare,
   ArrowRight,
-  CheckCircle2
+  CheckCircle2,
+  Linkedin,
+  ExternalLink
 } from "lucide-react";
 
 export default function Home() {
@@ -65,14 +67,16 @@ export default function Home() {
                 href="/discuss"
                 className="w-full sm:w-auto inline-flex justify-center items-center gap-2 bg-gradient-to-r from-amber-600 to-orange-700 hover:from-amber-500 hover:to-orange-600 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-200 hover:shadow-lg hover:shadow-amber-500/25 hover:-translate-y-px"
               >
-                Discuss Your Business <ArrowRight className="w-5 h-5" />
+                Discuss a Workflow <ArrowRight className="w-5 h-5" />
               </Link>
-              <Link
-                href="/what-we-solve"
+              <a
+                href="https://calendar.app.google/MLAfP4WQRKfpMoWv6"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-full sm:w-auto inline-flex justify-center items-center gap-2 bg-transparent border border-[#1C1C2E] hover:border-amber-500/30 text-[#8B8BAD] hover:text-white font-medium px-8 py-4 rounded-lg transition-all duration-200"
               >
-                Explore Automation Opportunities
-              </Link>
+                Book a 30-Minute Call <ArrowRight className="w-5 h-5" />
+              </a>
             </div>
             
             <p className="text-[#52526E] text-sm mt-6 font-medium">
@@ -420,7 +424,7 @@ export default function Home() {
               href="/discuss"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-amber-600 to-orange-700 hover:from-amber-500 hover:to-orange-600 text-white font-semibold px-10 py-5 rounded-lg text-lg transition-all duration-200 hover:shadow-lg hover:shadow-amber-500/25 hover:-translate-y-px"
             >
-              Discuss My Workflow <ArrowRight className="w-5 h-5" />
+              Discuss a Workflow <ArrowRight className="w-5 h-5" />
             </Link>
           </motion.div>
         </div>
@@ -513,6 +517,59 @@ export default function Home() {
         </div>
       </section>
 
+      {/* NEW SECTION: WHY TALK TO US */}
+      <section className="py-24 bg-[#0B0B12] border-t border-[#1C1C2E]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div {...fadeUp} className="mb-16 text-center">
+            <p className="text-[11px] font-bold uppercase tracking-[0.15em] text-amber-400 mb-3">
+              WHY TALK TO US
+            </p>
+            <h2 className="font-display text-4xl md:text-5xl font-bold text-white">
+              Why businesses work with NextDevBuild
+            </h2>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+            {[
+              {
+                title: "Business-first",
+                desc: "We understand the workflow before recommending technology."
+              },
+              {
+                title: "Engineering depth",
+                desc: "AI, backend systems, APIs, cloud and data engineering under one roof."
+              },
+              {
+                title: "Practical AI",
+                desc: "We use AI where it creates measurable value—not because it's trendy."
+              },
+              {
+                title: "End-to-end",
+                desc: "From discovery and prototype to production integration."
+              },
+              {
+                title: "Founder-led",
+                desc: "You work directly with the people designing the solution."
+              }
+            ].map((card, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.08 }}
+                className="bg-[#13131F] border border-[#1C1C2E] rounded-xl p-6 hover:border-amber-500/30 transition-all duration-200 flex flex-col justify-between"
+              >
+                <div>
+                  <h3 className="text-white font-bold text-lg mb-3">{card.title}</h3>
+                  <p className="text-[#8B8BAD] text-sm leading-relaxed">{card.desc}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* NEW: ENTERPRISE READINESS */}
       <section className="py-24 bg-[#0B0B12]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -581,12 +638,12 @@ export default function Home() {
             <p className="text-[11px] font-bold uppercase tracking-[0.15em] text-amber-400 mb-3">
               BUILT FOR DECISION MAKERS
             </p>
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-white max-w-2xl mx-auto">
+            <h2 className="font-display text-4xl md:text-5xl font-bold text-white max-w-2xl mx-auto mb-4">
               Built for people responsible for the business — not just the technology.
             </h2>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
             {[
               { role: "CEO", desc: "Identify where your company is spending expensive human time on work that could be redesigned or automated." },
               { role: "CFO", desc: "Understand the cost of repetitive financial operations and identify opportunities to reduce manual effort." },
@@ -606,6 +663,30 @@ export default function Home() {
               </motion.div>
             ))}
           </div>
+
+          {/* FOUNDER CREDIBILITY CARD */}
+          <motion.div
+            {...fadeUp}
+            className="max-w-3xl mx-auto bg-[#13131F] border border-amber-500/30 rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between gap-6"
+          >
+            <div className="space-y-2 text-center md:text-left">
+              <span className="text-[11px] font-bold uppercase tracking-[0.15em] text-amber-400 block">
+                FOUNDER & LEAD ENGINEER
+              </span>
+              <h3 className="text-white font-bold text-2xl">Built by Mahesh Chaube</h3>
+              <p className="text-[#8B8BAD] text-sm leading-relaxed max-w-xl">
+                Software engineer with experience across enterprise software, cloud, data engineering and financial technology.
+              </p>
+            </div>
+            <a
+              href="https://www.linkedin.com/in/mahesh-chaube-3075b8226/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="shrink-0 inline-flex items-center gap-2 bg-amber-500/10 border border-amber-500/30 hover:border-amber-500 text-amber-300 hover:text-white font-semibold px-6 py-3 rounded-lg transition-all text-sm"
+            >
+              <Linkedin className="w-4 h-4 text-amber-400" /> LinkedIn <ExternalLink className="w-3.5 h-3.5" />
+            </a>
+          </motion.div>
         </div>
       </section>
 
@@ -722,25 +803,42 @@ export default function Home() {
             {...fadeUp}
             className="bg-[#13131F] border border-[#1C1C2E] rounded-xl p-8 hover:bg-[#17172A] hover:border-amber-500/30 transition-all duration-250 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 max-w-4xl"
           >
-            <div>
-              <div className="flex items-center gap-3 mb-3">
+            <div className="w-full">
+              <div className="flex items-center gap-3 mb-2">
                 <h3 className="text-2xl font-bold text-white">BharatSaver</h3>
                 <span className="bg-emerald-500/10 text-emerald-400 text-xs font-bold px-2 py-1 rounded uppercase tracking-wider border border-emerald-500/20">
                   Live
                 </span>
+                <span className="text-xs font-bold uppercase tracking-wider text-[#52526E]">
+                  Financial Technology
+                </span>
               </div>
-              <p className="text-[#8B8BAD] text-lg max-w-xl">
-                Financial technology platform providing financial calculators and tools for Indian consumers.
+              <p className="text-[#8B8BAD] text-base mb-4">
+                Consumer financial technology platform for calculating and comparing financial decisions.
               </p>
+              <ul className="grid grid-cols-1 sm:grid-cols-3 gap-2 mb-6 text-[#8B8BAD] text-xs">
+                <li className="flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-amber-400 shrink-0"></span>
+                  Multi-language financial calculators
+                </li>
+                <li className="flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-amber-400 shrink-0"></span>
+                  Financial calculation engine
+                </li>
+                <li className="flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-amber-400 shrink-0"></span>
+                  SEO/content-driven platform
+                </li>
+              </ul>
+              <Link
+                href="https://bharatsaver.com/en"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-transparent border border-[#1C1C2E] hover:border-amber-500/30 text-white font-medium px-5 py-2.5 rounded-lg text-sm transition-all duration-200"
+              >
+                View Live Project <ArrowRight className="w-4 h-4 text-amber-400" />
+              </Link>
             </div>
-            <Link
-              href="https://bharatsaver.com/en"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="shrink-0 inline-flex items-center gap-2 bg-transparent border border-[#1C1C2E] hover:border-amber-500/30 text-white font-medium px-6 py-3 rounded-lg transition-all duration-200"
-            >
-              View Project <ArrowRight className="w-4 h-4" />
-            </Link>
           </motion.div>
         </div>
       </section>
@@ -765,7 +863,7 @@ export default function Home() {
             <div className="hidden md:block absolute top-[28px] left-[10%] right-[10%] h-[1px] bg-amber-500/20 z-0"></div>
             
             {[
-              { title: "30-min conversation", desc: "We understand the problem, not just the technology." },
+              { title: "30-min conversation", desc: "We understand the business problem before recommending the technology." },
               { title: "Workflow analysis", desc: "We map the current process from start to finish." },
               { title: "Solution proposal", desc: "We recommend AI, automation, integration or custom software." },
               { title: "Prototype", desc: "We build a focused proof of concept around the highest-value opportunity." },
@@ -822,16 +920,16 @@ export default function Home() {
                 href="/discuss"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-amber-600 to-orange-700 hover:from-amber-500 hover:to-orange-600 text-white font-semibold px-10 py-5 rounded-lg text-lg transition-all duration-200 hover:shadow-lg hover:shadow-amber-500/25 hover:-translate-y-px"
               >
-                Discuss Your Business <ArrowRight className="w-5 h-5" />
+                Discuss a Workflow <ArrowRight className="w-5 h-5" />
               </Link>
-              <Link
+              <a
                 href="https://calendar.app.google/MLAfP4WQRKfpMoWv6"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#8B8BAD] hover:text-white transition-colors underline underline-offset-4 decoration-[#1C1C2E] hover:decoration-amber-500/50"
+                className="inline-flex items-center gap-2 border border-[#1C1C2E] hover:border-amber-500/30 bg-transparent text-white font-semibold px-8 py-4 rounded-lg transition-all duration-200 hover:bg-[#13131F]"
               >
-                Or book a 30-minute call
-              </Link>
+                Book a 30-Minute Call <ArrowRight className="w-4 h-4 text-amber-400" />
+              </a>
             </div>
           </motion.div>
         </div>
