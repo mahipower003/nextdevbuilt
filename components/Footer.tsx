@@ -1,135 +1,130 @@
-'use client';
+﻿'use client';
 
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail, Phone, MapPin, Code } from 'lucide-react';
+import { Linkedin, Mail, Phone, MapPin } from 'lucide-react';
 
-const footerLinks = {
-  services: [
-    { name: 'React/Next.js Development', href: '/services#react' },
-    { name: 'Java/Spring Boot', href: '/services#java' },
-    { name: 'AWS Cloud Solutions', href: '/services#aws' },
-    { name: 'Data Engineering', href: '/services#data' },
-  ],
-  company: [
-    { name: 'About Us', href: '/about' },
-    { name: 'Contact', href: '/contact' },
-    { name: 'Privacy Policy', href: '/privacy' },
-    { name: 'Terms of Service', href: '/terms' },
-  ],
-};
+const solutions = [
+  { name: 'What We Solve', href: '/what-we-solve' },
+  { name: 'How It Works', href: '/how-it-works' },
+  { name: 'Industries', href: '/industries' },
+  { name: 'Insights', href: '/insights' },
+  { name: 'Selected Work', href: '/work' },
+];
 
-const socialLinks = [
-  { name: 'GitHub', href: '#', icon: Github },
-  { name: 'LinkedIn', href: '#', icon: Linkedin },
-  { name: 'Email', href: 'mailto:maheshchaube333@gmail.com', icon: Mail },
+const company = [
+  { name: 'About', href: '/about' },
+  { name: 'Discuss Your Business', href: '/discuss' },
+  { name: 'Privacy Policy', href: '/privacy' },
+  { name: 'Terms of Service', href: '/terms' },
 ];
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Brand Section */}
-          <div className="md:col-span-1 px-4">
-            <Link href="/" className="flex items-center space-x-2 mb-4 group">
-              <div className="relative">
-                <div className="w-10 h-10 bg-gradient-to-br from-purple-600 to-blue-600 rounded-lg flex items-center justify-center transform group-hover:scale-110 transition-transform duration-200">
-                  <Code className="w-5 h-5 text-white" />
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-600 to-blue-600 rounded-lg blur-sm opacity-30 group-hover:opacity-50 transition-opacity duration-200"></div>
+    <footer className="bg-[#0B0B12] border-t border-[#1C1C2E]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+
+          {/* Brand */}
+          <div className="md:col-span-1">
+            <Link href="/" className="flex items-center gap-2.5 mb-5 group w-fit">
+              <div className="w-7 h-7 rounded-md bg-gradient-to-br from-amber-500 to-orange-700 flex items-center justify-center">
+                <span className="text-white font-black text-[11px]">N</span>
               </div>
-              <span className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                NextDevBuild
-              </span>
+              <span className="font-display font-bold text-[15px] text-white">NextDevBuild</span>
             </Link>
-            <p className="text-gray-400 mb-6 leading-relaxed">
-              Expert IT services specializing in modern web development and cloud solutions. 
-              We build scalable, production-ready applications that drive business success.
+            <p className="text-[#52526E] text-sm leading-relaxed mb-6">
+              AI-powered business automation for companies that have outgrown manual processes.
             </p>
-
-          </div>
-
-          {/* Services Links */}
-          <div className="md:col-span-1 px-4">
-            <h3 className="text-lg font-semibold mb-4 text-white">Services</h3>
-            <ul className="space-y-3">
-              {footerLinks.services.map((item) => (
-                <li key={item.name}>
-                  <Link
-                    href={item.href}
-                    className="text-gray-400 hover:text-purple-400 transition-colors duration-200 block"
-                  >
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Company Links */}
-          <div className="md:col-span-1 px-4">
-            <h3 className="text-lg font-semibold mb-4 text-white">Company</h3>
-            <ul className="space-y-3">
-              {footerLinks.company.map((item) => (
-                <li key={item.name}>
-                  <Link
-                    href={item.href}
-                    className="text-gray-400 hover:text-purple-400 transition-colors duration-200 block"
-                  >
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-          
-          {/* Contact Details */}
-          <div className="md:col-span-1 px-4">
-            <h3 className="text-lg font-semibold mb-4 text-white">Contact Us</h3>
-            <div className="space-y-3">
-              <div className="flex items-center space-x-2 text-gray-400">
-                <Phone className="w-4 h-4" />
-                <span className="text-sm">+91 7666705885</span>
-              </div>
-              <div className="flex items-center space-x-2 text-gray-400">
+            <div className="flex items-center gap-3">
+              <a
+                href="https://www.linkedin.com/in/mahi003/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-lg bg-[#13131F] border border-[#1C1C2E] flex items-center justify-center text-[#52526E] hover:text-white hover:border-amber-500/40 transition-all duration-200"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="w-4 h-4" />
+              </a>
+              <a
+                href="mailto:maheshchaube333@gmail.com"
+                className="w-9 h-9 rounded-lg bg-[#13131F] border border-[#1C1C2E] flex items-center justify-center text-[#52526E] hover:text-white hover:border-amber-500/40 transition-all duration-200"
+                aria-label="Email"
+              >
                 <Mail className="w-4 h-4" />
-                <span className="text-sm">maheshchaube@gmail.com</span>
+              </a>
+            </div>
+          </div>
+
+          {/* Solutions */}
+          <div>
+            <h3 className="text-[11px] font-bold uppercase tracking-[0.12em] text-[#52526E] mb-5">
+              Solutions
+            </h3>
+            <ul className="space-y-3">
+              {solutions.map((item) => (
+                <li key={item.name}>
+                  <Link
+                    href={item.href}
+                    className="text-sm text-[#8B8BAD] hover:text-white transition-colors duration-200"
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Company */}
+          <div>
+            <h3 className="text-[11px] font-bold uppercase tracking-[0.12em] text-[#52526E] mb-5">
+              Company
+            </h3>
+            <ul className="space-y-3">
+              {company.map((item) => (
+                <li key={item.name}>
+                  <Link
+                    href={item.href}
+                    className="text-sm text-[#8B8BAD] hover:text-white transition-colors duration-200"
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h3 className="text-[11px] font-bold uppercase tracking-[0.12em] text-[#52526E] mb-5">
+              Contact
+            </h3>
+            <div className="space-y-3">
+              <div className="flex items-center gap-3 text-sm text-[#8B8BAD]">
+                <Phone className="w-4 h-4 shrink-0" />
+                <span>+91 7666705885</span>
               </div>
-              <div className="flex items-center space-x-2 text-gray-400">
-                <MapPin className="w-4 h-4" />
-                <span className="text-sm">Mumbai, India</span>
+              <div className="flex items-center gap-3 text-sm text-[#8B8BAD]">
+                <Mail className="w-4 h-4 shrink-0" />
+                <a
+                  href="mailto:maheshchaube333@gmail.com"
+                  className="hover:text-white transition-colors duration-200"
+                >
+                  maheshchaube333@gmail.com
+                </a>
+              </div>
+              <div className="flex items-center gap-3 text-sm text-[#8B8BAD]">
+                <MapPin className="w-4 h-4 shrink-0" />
+                <span>Mumbai, India</span>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400 text-sm">
+        <div className="border-t border-[#1C1C2E] mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-[#52526E] text-xs">
             © {new Date().getFullYear()} NextDevBuild. All rights reserved.
           </p>
-          <div className="flex space-x-4">
-            {socialLinks.map((item) => {
-              const Icon = item.icon;
-              return (
-                  <motion.a
-                      key={item.name}
-                      href={item.href}
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.95 }}
-                      className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gradient-to-br hover:from-purple-600 hover:to-blue-600 transition-all duration-200"
-                  >
-                    <Icon className="w-5 h-5" />
-                  </motion.a>
-              );
-            })}
-          </div>
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link href="/sitemap" className="text-gray-400 hover:text-white text-sm transition-colors duration-200">
-              Sitemap
-            </Link>
-          </div>
+          <p className="text-[#52526E] text-xs">AI Workflow Engineering · Mumbai, India</p>
         </div>
       </div>
     </footer>

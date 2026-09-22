@@ -1,266 +1,841 @@
-'use client';
+﻿"use client";
 
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import {ArrowRight, Code, Server, Cloud, Database, Calculator, Users, Award, Zap, Vault} from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { motion } from "framer-motion";
+import Link from "next/link";
+import {
+  FileText,
+  RefreshCcw,
+  BarChart3,
+  Mail,
+  UserCheck,
+  CheckSquare,
+  ArrowRight,
+  CheckCircle2
+} from "lucide-react";
 
-const services = [
-  {
-    icon: Code,
-    title: 'React/Next.js Development',
-    description: 'Modern, responsive web applications built with the latest React and Next.js technologies for optimal performance.',
-    color: 'from-blue-500 to-cyan-500',
-  },
-  {
-    icon: Server,
-    title: 'Java/Spring Boot Backend',
-    description: 'Scalable, secure backend services using Java and Spring Boot with microservices architecture.',
-    color: 'from-green-500 to-emerald-500',
-  },
-  {
-    icon: Cloud,
-    title: 'AWS Cloud Solutions',
-    description: 'Complete cloud infrastructure setup with Lambda, EC2, Kubernetes, and Docker containerization.',
-    color: 'from-orange-500 to-red-500',
-  },
-  {
-    icon: Database,
-    title: 'Data Engineering',
-    description: 'Advanced data processing with Databricks, Apache Flink, and modern data pipeline solutions.',
-    color: 'from-purple-500 to-pink-500',
-  },
-];
+export default function Home() {
+  const fadeUp = {
+    initial: { opacity: 0, y: 24 },
+    whileInView: { opacity: 1, y: 0 },
+    viewport: { once: true }
+  };
 
-const stats = [
-  { icon: Users, value: '26+', label: 'Happy Clients' },
-  { icon: Award, value: '58+', label: 'Projects Completed' },
-  { icon: Zap, value: '99%', label: 'Client Satisfaction' },
-  { icon: Vault, value: '70%', label: 'Lowest Market Fee' },
-];
-
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.6,
-    },
-  },
-};
-
-export default function HomePage() {
   return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Animated Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
-          <div className="absolute inset-0 opacity-20">
-            <div className="absolute top-0 -left-4 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
-            <div className="absolute top-0 -right-4 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl animate-pulse animation-delay-2s"></div>
-            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl animate-pulse animation-delay-4s"></div>
-          </div>
-        </div>
+    <main className="min-h-screen bg-[#0B0B12] selection:bg-amber-500/30">
+      {/* 1. HERO SECTION */}
+      <section className="relative min-h-screen pt-[120px] pb-24 overflow-hidden flex flex-col justify-center">
+        <div className="absolute inset-0 z-0 bg-[#0B0B12]" />
+        <div
+          className="absolute inset-0 z-0 opacity-20"
+          style={{
+            backgroundImage: "radial-gradient(circle at center top, rgba(99, 102, 241, 0.4), transparent 60%)"
+          }}
+        />
+        <div
+          className="absolute inset-0 z-0 opacity-40"
+          style={{
+            backgroundImage: "linear-gradient(#1C1C2E 1px, transparent 1px), linear-gradient(90deg, #1C1C2E 1px, transparent 1px)",
+            backgroundSize: "48px 48px"
+          }}
+        />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.5 }}
+            className="flex flex-col items-start max-w-4xl"
           >
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Expert IT Services for{' '}
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                Modern Businesses
+            <div className="inline-flex items-center rounded-full border border-amber-500/30 bg-amber-500/10 px-3 py-1 mb-8">
+              <span className="text-[11px] font-bold uppercase tracking-[0.15em] text-amber-400">
+                AI WORKFLOW ENGINEERING
               </span>
+            </div>
+
+            <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight">
+              Turn Expensive Manual Work Into Intelligent Software.
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Full-stack development, cloud solutions, and specialized LIC calculators. 
-              We transform your ideas into powerful, scalable applications.
-            </p>{/*
-            <!-- Start of Meetings Embed Script -->
-            <div class="meetings-iframe-container" data-src="https://meetings-na2.hubspot.com/mahesh-chaubey?embed=true"></div>
-            <script type="text/javascript" src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"></script>
-            <!-- End of Meetings Embed Script -->*/}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link href="https://meetings-na2.hubspot.com/mahesh-chaubey?embed=true">
-                <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transform hover:scale-105 transition-all duration-200 shadow-2xl group">
-                  Book A Meeting
-                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
-                </Button>
+
+            <p className="text-[#8B8BAD] text-xl mb-10 max-w-2xl leading-relaxed">
+              We help businesses identify repetitive financial and operational workflows, then design and build AI-powered systems to automate them.
+            </p>
+
+            <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
+              <Link
+                href="/discuss"
+                className="w-full sm:w-auto inline-flex justify-center items-center gap-2 bg-gradient-to-r from-amber-600 to-orange-700 hover:from-amber-500 hover:to-orange-600 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-200 hover:shadow-lg hover:shadow-amber-500/25 hover:-translate-y-px"
+              >
+                Discuss Your Business <ArrowRight className="w-5 h-5" />
               </Link>
-              <Link href="/services">
-                <Button variant="outline" size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transform hover:scale-105 transition-all duration-200 shadow-2xl group">
-                  Explore Our Services
-                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
-                </Button>
+              <Link
+                href="/what-we-solve"
+                className="w-full sm:w-auto inline-flex justify-center items-center gap-2 bg-transparent border border-[#1C1C2E] hover:border-amber-500/30 text-[#8B8BAD] hover:text-white font-medium px-8 py-4 rounded-lg transition-all duration-200"
+              >
+                Explore Automation Opportunities
               </Link>
             </div>
-            <script type="text/javascript" id="hs-script-loader" async defer src="//js-na2.hs-scripts.com/243746156.js"></script>
+            
+            <p className="text-[#52526E] text-sm mt-6 font-medium">
+              No generic AI pitch. We start with your workflow.
+            </p>
           </motion.div>
         </div>
-
-        {/* Scroll Indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1, duration: 0.5 }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-        >
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity }}
-            className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center"
-          >
-            <motion.div
-              animate={{ y: [0, 12, 0] }}
-              transition={{ duration: 1.5, repeat: Infinity }}
-              className="w-1 h-3 bg-white/60 rounded-full mt-2"
-            />
-          </motion.div>
-        </motion.div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-20 bg-white">
+      {/* 2. PROBLEM SECTION */}
+      <section className="py-24 bg-[#0D0D16] border-t border-[#1C1C2E]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-8"
-          >
-            {stats.map((stat, index) => {
-              const Icon = stat.icon;
-              return (
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <motion.div {...fadeUp}>
+              <p className="text-[11px] font-bold uppercase tracking-[0.15em] text-amber-400 mb-3">
+                THE REALITY
+              </p>
+              <h2 className="font-display text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
+                Your business may already have enough software.
+              </h2>
+              <p className="text-[#8B8BAD] text-lg mb-8">
+                The problem is what's happening between the software.
+              </p>
+              <blockquote className="border-l-2 border-amber-500 pl-6 mb-8 text-xl text-white font-medium italic">
+                "Every manual handoff creates cost, delay and opportunity for error."
+              </blockquote>
+              <Link
+                href="/discuss"
+                className="inline-flex items-center gap-2 text-amber-400 hover:text-amber-300 font-semibold transition-colors"
+              >
+                Show Us Your Workflow <ArrowRight className="w-4 h-4" />
+              </Link>
+            </motion.div>
+
+            <div className="relative p-8 rounded-2xl bg-[#0B0B12] border border-[#1C1C2E]">
+              <div className="flex flex-col items-center gap-2 font-mono text-sm">
+                {["EMAIL", "EXCEL", "PDF"].map((node, i) => (
+                  <motion.div
+                    key={node}
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.15 }}
+                    className="w-48 text-center bg-[#13131F] border border-[#1C1C2E] rounded-md py-3 text-[#8B8BAD]"
+                  >
+                    {node}
+                  </motion.div>
+                ))}
+                
                 <motion.div
-                  key={stat.label}
-                  variants={itemVariants}
-                  className="text-center group"
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 3 * 0.15 }}
+                  className="w-48 text-center bg-red-500/10 border border-red-500/30 text-red-400 rounded-md py-3 font-semibold"
                 >
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-100 to-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-200">
-                    <Icon className="w-8 h-8 text-purple-600" />
-                  </div>
-                  <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">{stat.value}</div>
-                  <div className="text-gray-600 font-medium">{stat.label}</div>
+                  MANUAL REVIEW
                 </motion.div>
-              );
-            })}
+
+                {["ERP / CRM", "EXCEL"].map((node, i) => (
+                  <motion.div
+                    key={node}
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: (4 + i) * 0.15 }}
+                    className="w-48 text-center bg-[#13131F] border border-[#1C1C2E] rounded-md py-3 text-[#8B8BAD]"
+                  >
+                    {node}
+                  </motion.div>
+                ))}
+
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 6 * 0.15 }}
+                  className="w-48 text-center bg-amber-500/10 border border-amber-500/30 text-amber-400 rounded-md py-3 font-semibold"
+                >
+                  APPROVAL
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 7 * 0.15 }}
+                  className="w-48 text-center bg-[#13131F] border border-[#1C1C2E] rounded-md py-3 text-[#8B8BAD]"
+                >
+                  EMAIL
+                </motion.div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 3. PAIN POINTS */}
+      <section className="py-24 bg-[#0B0B12]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div {...fadeUp} className="mb-16 text-center">
+            <p className="text-[11px] font-bold uppercase tracking-[0.15em] text-amber-400 mb-3">
+              WHAT KEEPS YOUR TEAM BUSY
+            </p>
+            <h2 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">
+              What keeps your operations team busy?
+            </h2>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            {[
+              {
+                icon: <FileText className="w-6 h-6 text-amber-400" />,
+                title: "Document-heavy work",
+                desc: "Employees spend hours reading, extracting and validating information from documents."
+              },
+              {
+                icon: <RefreshCcw className="w-6 h-6 text-amber-400" />,
+                title: "Reconciliation",
+                desc: "Data needs to be compared across systems, spreadsheets and statements."
+              },
+              {
+                icon: <BarChart3 className="w-6 h-6 text-amber-400" />,
+                title: "Reporting",
+                desc: "Teams repeatedly collect data, prepare spreadsheets and create management reports."
+              },
+              {
+                icon: <Mail className="w-6 h-6 text-amber-400" />,
+                title: "Email-driven processes",
+                desc: "Important work starts and ends inside inboxes."
+              },
+              {
+                icon: <UserCheck className="w-6 h-6 text-amber-400" />,
+                title: "Verification",
+                desc: "Employees manually check customers, vendors, transactions or applications."
+              },
+              {
+                icon: <CheckSquare className="w-6 h-6 text-amber-400" />,
+                title: "Approvals",
+                desc: "Teams spend time chasing information and moving work between people."
+              }
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="bg-[#13131F] border border-[#1C1C2E] rounded-xl p-8 hover:bg-[#17172A] hover:border-amber-500/30 transition-all duration-250 group"
+              >
+                <div className="mb-4 bg-amber-500/10 w-12 h-12 rounded-lg flex items-center justify-center">
+                  {item.icon}
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
+                <p className="text-[#8B8BAD] leading-relaxed">{item.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.div
+            {...fadeUp}
+            className="bg-amber-500/5 border border-amber-500/20 rounded-xl p-8 text-center"
+          >
+            <p className="text-lg text-amber-100 font-medium">
+              If your company performs a process hundreds or thousands of times every month, it may be a candidate for automation.
+            </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Services Preview Section */}
-      <section className="py-20 bg-gray-50">
+      {/* NEW: BEFORE -> AFTER SECTION */}
+      <section className="py-24 bg-[#0D0D16] border-t border-[#1C1C2E]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Our <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Expertise</span>
+          <motion.div {...fadeUp} className="mb-16 text-center">
+            <p className="text-[11px] font-bold uppercase tracking-[0.15em] text-amber-400 mb-3">
+              THE TRANSFORMATION
+            </p>
+            <h2 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">
+              Same business process. Less manual work.
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              From frontend to backend, cloud infrastructure to data engineering - we deliver end-to-end solutions 
-              that scale with your business needs.
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            {/* BEFORE */}
+            <motion.div
+              {...fadeUp}
+              className="bg-[#13131F] border border-[#1C1C2E] rounded-xl p-8"
+            >
+              <div className="inline-flex items-center rounded bg-red-500/10 px-2 py-1 mb-6 border border-red-500/20">
+                <span className="text-[11px] font-bold uppercase tracking-[0.15em] text-red-400">
+                  BEFORE
+                </span>
+              </div>
+              <div className="flex flex-col lg:flex-row flex-wrap items-center justify-center lg:justify-start gap-2 lg:gap-4 font-mono text-sm">
+                <div className="px-4 py-2 bg-[#1C1C2E] rounded-md text-[#8B8BAD]">Email</div>
+                <ArrowRight className="w-4 h-4 text-[#52526E] hidden lg:block" />
+                <div className="px-4 py-2 bg-[#1C1C2E] rounded-md text-[#8B8BAD]">Excel</div>
+                <ArrowRight className="w-4 h-4 text-[#52526E] hidden lg:block" />
+                <div className="px-4 py-2 bg-[#1C1C2E] rounded-md text-[#8B8BAD]">PDF</div>
+                <ArrowRight className="w-4 h-4 text-[#52526E] hidden lg:block" />
+                <div className="px-4 py-2 bg-red-500/10 border border-red-500/30 text-red-400 rounded-md font-semibold">Human Review</div>
+                <ArrowRight className="w-4 h-4 text-[#52526E] hidden lg:block" />
+                <div className="px-4 py-2 bg-[#1C1C2E] rounded-md text-[#8B8BAD]">ERP</div>
+                <ArrowRight className="w-4 h-4 text-[#52526E] hidden lg:block" />
+                <div className="px-4 py-2 bg-[#1C1C2E] rounded-md text-[#8B8BAD]">Excel</div>
+                <ArrowRight className="w-4 h-4 text-[#52526E] hidden lg:block" />
+                <div className="px-4 py-2 bg-amber-500/10 border border-amber-500/30 text-amber-400 rounded-md font-semibold">Approval</div>
+                <ArrowRight className="w-4 h-4 text-[#52526E] hidden lg:block" />
+                <div className="px-4 py-2 bg-[#1C1C2E] rounded-md text-[#8B8BAD]">Email</div>
+              </div>
+            </motion.div>
+
+            {/* AFTER */}
+            <motion.div
+              {...fadeUp}
+              transition={{ delay: 0.2 }}
+              className="bg-[#13131F] border border-amber-500/30 rounded-xl p-8 relative overflow-hidden"
+            >
+              <div
+                className="absolute inset-0 opacity-10"
+                style={{
+                  backgroundImage: "radial-gradient(circle at top right, rgba(99, 102, 241, 1), transparent 50%)"
+                }}
+              />
+              <div className="relative z-10">
+                <div className="inline-flex items-center rounded bg-emerald-500/10 px-2 py-1 mb-6 border border-emerald-500/20">
+                  <span className="text-[11px] font-bold uppercase tracking-[0.15em] text-emerald-400">
+                    AFTER
+                  </span>
+                </div>
+                <div className="flex flex-col lg:flex-row flex-wrap items-center justify-center lg:justify-start gap-2 lg:gap-4 font-mono text-sm">
+                  <div className="px-4 py-2 bg-amber-500/10 border border-amber-500/30 text-amber-300 rounded-md">Email</div>
+                  <ArrowRight className="w-4 h-4 text-indigo-500/50 hidden lg:block" />
+                  <div className="px-4 py-2 bg-amber-500/10 border border-amber-500/30 text-amber-300 rounded-md font-semibold">AI Processing</div>
+                  <ArrowRight className="w-4 h-4 text-indigo-500/50 hidden lg:block" />
+                  <div className="px-4 py-2 bg-amber-500/10 border border-amber-500/30 text-amber-300 rounded-md font-semibold">Automated Validation</div>
+                  <ArrowRight className="w-4 h-4 text-indigo-500/50 hidden lg:block" />
+                  <div className="px-4 py-2 bg-amber-500/10 border border-amber-500/30 text-amber-300 rounded-md">Exception Review</div>
+                  <ArrowRight className="w-4 h-4 text-indigo-500/50 hidden lg:block" />
+                  <div className="px-4 py-2 bg-amber-500/10 border border-amber-500/30 text-amber-300 rounded-md">ERP</div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+          
+          <motion.div {...fadeUp} className="text-center">
+            <p className="text-white font-bold text-xl">Same business process. Less manual work.</p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* NEW: BUSINESS PROBLEMS WE SOLVE */}
+      <section className="py-24 bg-[#0B0B12]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div {...fadeUp} className="mb-16 text-center">
+            <p className="text-[11px] font-bold uppercase tracking-[0.15em] text-amber-400 mb-3">
+              PROBLEMS WE SOLVE
+            </p>
+            <h2 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">
+              We solve business problems. Not technology problems.
+            </h2>
+            <p className="text-[#8B8BAD] text-lg max-w-2xl mx-auto">
+              These are the workflows executives describe to us most often.
             </p>
           </motion.div>
 
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
-          >
-            {services.map((service, index) => {
-              const Icon = service.icon;
-              return (
-                <motion.div key={service.title} variants={itemVariants}>
-                  <Card className="h-full group hover:shadow-2xl transition-all duration-300 border-0 bg-white/80 backdrop-blur-sm">
-                    <CardHeader className="text-center pb-4">
-                      <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
-                        <Icon className="w-8 h-8 text-white" />
-                      </div>
-                      <CardTitle className="text-xl font-bold text-gray-900 group-hover:text-purple-700 transition-colors duration-200">
-                        {service.title}
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <CardDescription className="text-gray-600 text-center leading-relaxed">
-                        {service.description}
-                      </CardDescription>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              );
-            })}
-          </motion.div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            {[
+              {
+                title: "Manual Finance Operations",
+                desc: "Month-end closes, accruals and finance processes that require too much human effort."
+              },
+              {
+                title: "Reconciliation Across Systems",
+                desc: "Matching data between ERP, bank systems, spreadsheets and reports."
+              },
+              {
+                title: "Document-Heavy Processes",
+                desc: "Extracting, reviewing and routing information from PDFs, emails and scanned documents."
+              },
+              {
+                title: "Repetitive Reporting",
+                desc: "Building the same management reports from multiple data sources every week or month."
+              },
+              {
+                title: "Customer / Vendor Onboarding",
+                desc: "Collecting, verifying and processing information from new customers or suppliers."
+              },
+              {
+                title: "Approval Workflows",
+                desc: "Moving work between people and tracking what needs sign-off."
+              },
+              {
+                title: "Data Movement Between Systems",
+                desc: "Copying information from one system into another, manually."
+              },
+              {
+                title: "Internal Tools That Don't Exist",
+                desc: "Processes being run in email and spreadsheets because no software was ever built for them."
+              }
+            ].map((prob, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.05 }}
+                className="bg-[#13131F] border border-[#1C1C2E] rounded-xl p-6 hover:bg-[#17172A] hover:border-amber-500/30 transition-all duration-250"
+              >
+                <h3 className="text-white font-bold mb-2">{prob.title}</h3>
+                <p className="text-[#8B8BAD] text-sm leading-relaxed">{prob.desc}</p>
+              </motion.div>
+            ))}
+          </div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.4, duration: 0.6 }}
-            className="text-center mt-12"
+            {...fadeUp}
+            className="border border-amber-500/30 bg-amber-500/5 rounded-xl p-8 flex flex-col md:flex-row items-center justify-between gap-6"
           >
-            <Link href="/services">
-              <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transform hover:scale-105 transition-all duration-200 shadow-xl group">
-                View All Services
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
-              </Button>
+            <p className="text-white text-lg font-medium">
+              Have a problem that isn't listed? Tell us about it.
+            </p>
+            <Link
+              href="/discuss"
+              className="shrink-0 inline-flex items-center gap-2 bg-amber-600 hover:bg-amber-500 text-white font-semibold px-6 py-3 rounded-lg transition-all"
+            >
+              Describe Your Workflow <ArrowRight className="w-4 h-4" />
             </Link>
           </motion.div>
         </div>
       </section>
 
-      {/* Contact CTA Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      {/* 4. KEY SALES SECTION */}
+      <section className="py-28 bg-[#0D0D16] border-y border-[#1C1C2E] text-center">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
+          <motion.div {...fadeUp}>
+            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
+              Tell us what your team spends too much time doing.
+            </h2>
+            <div className="text-xl text-[#8B8BAD] space-y-6 mb-12 max-w-2xl mx-auto">
+              <p>You don't need to know whether AI is the answer.</p>
+              <p>Tell us how the process works today. We'll help identify where technology could remove unnecessary manual work.</p>
+            </div>
+            <Link
+              href="/discuss"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-amber-600 to-orange-700 hover:from-amber-500 hover:to-orange-600 text-white font-semibold px-10 py-5 rounded-lg text-lg transition-all duration-200 hover:shadow-lg hover:shadow-amber-500/25 hover:-translate-y-px"
+            >
+              Discuss My Workflow <ArrowRight className="w-5 h-5" />
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* 5. HOW WE WORK */}
+      <section className="py-24 bg-[#0B0B12]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div {...fadeUp} className="mb-16 text-center md:text-left">
+            <p className="text-[11px] font-bold uppercase tracking-[0.15em] text-amber-400 mb-3">
+              OUR PROCESS
+            </p>
+            <h2 className="font-display text-4xl md:text-5xl font-bold text-white max-w-3xl">
+              We don't start with technology. We start with the business problem.
+            </h2>
+          </motion.div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-12">
+            {[
+              { num: "01", name: "Discover", desc: "We understand the process, people and systems involved." },
+              { num: "02", name: "Map", desc: "We document the workflow from start to finish." },
+              { num: "03", name: "Measure", desc: "We estimate volume, time, cost and bottlenecks." },
+              { num: "04", name: "Identify", desc: "We determine where AI, automation or better software could create measurable value." },
+              { num: "05", name: "Build", desc: "We create a focused proof of concept around the highest-value opportunity." },
+              { num: "06", name: "Scale", desc: "Once the economics are proven, we integrate the solution into the business." }
+            ].map((stage, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="relative"
+              >
+                <div className="text-3xl font-display font-bold text-indigo-500/40 mb-2">{stage.num}</div>
+                <h3 className="text-xl font-bold text-white mb-3">{stage.name}</h3>
+                <p className="text-[#52526E] leading-relaxed">{stage.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* NEW: BUILD vs BUY vs AUTOMATE vs AI */}
+      <section className="py-24 bg-[#0D0D16] border-t border-[#1C1C2E]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div {...fadeUp} className="mb-16 text-center">
+            <p className="text-[11px] font-bold uppercase tracking-[0.15em] text-amber-400 mb-3">
+              OUR APPROACH
+            </p>
+            <h2 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">
+              Sometimes the answer isn't custom software.
+            </h2>
+            <p className="text-[#8B8BAD] text-lg max-w-2xl mx-auto">
+              We help determine whether the right approach is building, buying, integrating or automating.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-12">
+            {[
+              { tag: "BUY", desc: "Use an existing product that already solves the problem." },
+              { tag: "INTEGRATE", desc: "Connect the systems you already have." },
+              { tag: "AUTOMATE", desc: "Remove repetitive manual work without rebuilding." },
+              { tag: "BUILD", desc: "Create software where existing solutions don't fit." },
+              { tag: "AI", desc: "Apply AI where judgment, document or knowledge work can genuinely benefit." }
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="bg-[#13131F] border border-[#1C1C2E] rounded-xl p-6 text-center flex flex-col items-center"
+              >
+                <div className="inline-flex items-center rounded-full bg-amber-500/10 px-3 py-1 mb-4 border border-amber-500/30">
+                  <span className="text-xs font-bold uppercase tracking-wider text-amber-400">
+                    {item.tag}
+                  </span>
+                </div>
+                <p className="text-[#8B8BAD] text-sm">{item.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+          
+          <motion.div {...fadeUp} className="text-center">
+            <p className="text-white font-medium">
+              We recommend the right approach for the problem — not the most profitable one for us.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* NEW: ENTERPRISE READINESS */}
+      <section className="py-24 bg-[#0B0B12]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div {...fadeUp} className="mb-12">
+            <p className="text-[11px] font-bold uppercase tracking-[0.15em] text-amber-400 mb-3">
+              BUILT FOR BUSINESS
+            </p>
+            <h2 className="font-display text-4xl md:text-5xl font-bold text-white">
+              Built for business environments.
+            </h2>
+          </motion.div>
+
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="flex flex-wrap justify-center gap-4 mb-12 max-w-4xl mx-auto"
+          >
+            {[
+              "Secure Architecture",
+              "Role-Based Access",
+              "Audit Trails",
+              "API Integrations",
+              "Cloud Deployment",
+              "Data Protection",
+              "Human Approval Workflows"
+            ].map((feature) => (
+              <div
+                key={feature}
+                className="flex items-center gap-2 px-4 py-2 bg-[#13131F] border border-[#1C1C2E] rounded-full text-white text-sm font-medium shadow-sm"
+              >
+                <CheckCircle2 className="w-4 h-4 text-amber-400" />
+                {feature}
+              </div>
+            ))}
+          </motion.div>
+
+          <motion.p
+            {...fadeUp}
+            className="text-[#52526E] text-sm italic max-w-2xl mx-auto"
+          >
+            We describe our architectural practices accurately. We don't display certifications we haven't earned.
+          </motion.p>
+        </div>
+      </section>
+
+      {/* 6. TRUST SECTION */}
+      <section className="py-28 bg-[#0D0D16] text-center border-y border-[#1C1C2E]">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div {...fadeUp}>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-6">
+              Sometimes AI isn't the answer.
+            </h2>
+            <p className="text-[#8B8BAD] text-xl leading-relaxed">
+              We don't recommend AI simply because it's fashionable. Sometimes the right solution is a workflow change, API integration, traditional automation or better software. We choose the technology based on the business problem.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* 7. FOR EXECUTIVES */}
+      <section className="py-24 bg-[#0B0B12]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div {...fadeUp} className="mb-16 text-center">
+            <p className="text-[11px] font-bold uppercase tracking-[0.15em] text-amber-400 mb-3">
+              BUILT FOR DECISION MAKERS
+            </p>
+            <h2 className="font-display text-4xl md:text-5xl font-bold text-white max-w-2xl mx-auto">
+              Built for people responsible for the business — not just the technology.
+            </h2>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {[
+              { role: "CEO", desc: "Identify where your company is spending expensive human time on work that could be redesigned or automated." },
+              { role: "CFO", desc: "Understand the cost of repetitive financial operations and identify opportunities to reduce manual effort." },
+              { role: "COO", desc: "Improve throughput without simply adding more people." },
+              { role: "CTO", desc: "Turn manual processes into secure, maintainable software integrated with your existing systems." }
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="bg-[#13131F] border border-[#1C1C2E] rounded-xl p-8 hover:bg-[#17172A] hover:border-amber-500/30 transition-all duration-250"
+              >
+                <div className="text-[11px] font-bold uppercase tracking-[0.15em] text-amber-400 mb-4">{item.role}</div>
+                <p className="text-white text-lg font-medium leading-relaxed">{item.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 8. ROI ECONOMICS */}
+      <section className="py-24 bg-[#0D0D16] border-y border-[#1C1C2E]">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div {...fadeUp} className="text-center mb-16">
+            <p className="text-[11px] font-bold uppercase tracking-[0.15em] text-amber-400 mb-3">
+              THE ECONOMICS
+            </p>
+            <h2 className="font-display text-4xl md:text-5xl font-bold text-white">
+              Before we build anything, we want to understand the economics.
+            </h2>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            className="bg-[#13131F] border border-[#1C1C2E] rounded-2xl p-8 max-w-2xl mx-auto mb-8 font-mono shadow-2xl"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Ready to Start Your Project?
-            </h2>
-            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              Let's discuss how we can help bring your vision to life with our expert development services.
+            <div className="flex flex-col gap-4 text-[#8B8BAD]">
+              <div className="flex justify-between items-center border-b border-[#1C1C2E] pb-4">
+                <span>Monthly volume</span>
+                <span className="text-white">v</span>
+              </div>
+              <div className="text-center text-xs text-[#52526E]">×</div>
+              <div className="flex justify-between items-center border-b border-[#1C1C2E] pb-4">
+                <span>Time per transaction</span>
+                <span className="text-white">t</span>
+              </div>
+              <div className="text-center text-xs text-[#52526E]">×</div>
+              <div className="flex justify-between items-center border-b border-[#1C1C2E] pb-4">
+                <span>People involved</span>
+                <span className="text-white">p</span>
+              </div>
+              <div className="text-center text-xs text-[#52526E]">×</div>
+              <div className="flex justify-between items-center border-b border-[#1C1C2E] pb-4">
+                <span>Cost per hour</span>
+                <span className="text-white">$</span>
+              </div>
+              <div className="flex justify-between items-center pt-2 text-amber-400 font-bold text-lg">
+                <span>= Manual process cost</span>
+                <span>$$$</span>
+              </div>
+            </div>
+          </motion.div>
+
+          <motion.p
+            {...fadeUp}
+            className="text-center text-[#8B8BAD] text-xl max-w-2xl mx-auto"
+          >
+            Once we understand the economics, we can determine whether automation is actually worth building.
+          </motion.p>
+        </div>
+      </section>
+
+      {/* 9. TECH CREDIBILITY */}
+      <section className="py-24 bg-[#0B0B12]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div {...fadeUp} className="mb-12">
+            <p className="text-[11px] font-bold uppercase tracking-[0.15em] text-amber-400 mb-3">
+              ENGINEERING
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact">
-                <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transform hover:scale-105 transition-all duration-200 shadow-xl">
-                  Get in Touch
-                </Button>
+            <h2 className="font-display text-4xl md:text-5xl font-bold text-white">
+              Built on enterprise-grade engineering.
+            </h2>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="flex flex-wrap justify-center gap-3 mb-12 max-w-4xl mx-auto"
+          >
+            {[
+              "AI / LLMs", "Java", "Spring Boot", "AWS",
+              "Cloud Infrastructure", "Data Engineering",
+              "APIs", "Databases", "Workflow Automation",
+              "Enterprise Applications"
+            ].map((tech) => (
+              <span
+                key={tech}
+                className="px-4 py-2 bg-[#13131F] border border-amber-500/30 rounded-full text-[#8B8BAD] font-mono text-sm"
+              >
+                {tech}
+              </span>
+            ))}
+          </motion.div>
+
+          <motion.p
+            {...fadeUp}
+            className="text-[#8B8BAD] text-lg max-w-2xl mx-auto"
+          >
+            Our engineering background allows us to take an automation from prototype to production system.
+          </motion.p>
+        </div>
+      </section>
+
+      {/* 10. SELECTED WORK */}
+      <section className="py-24 bg-[#0D0D16] border-y border-[#1C1C2E]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div {...fadeUp} className="mb-16">
+            <p className="text-[11px] font-bold uppercase tracking-[0.15em] text-amber-400 mb-3">
+              SELECTED WORK
+            </p>
+            <h2 className="font-display text-4xl md:text-5xl font-bold text-white">
+              What we've built.
+            </h2>
+          </motion.div>
+
+          <motion.div
+            {...fadeUp}
+            className="bg-[#13131F] border border-[#1C1C2E] rounded-xl p-8 hover:bg-[#17172A] hover:border-amber-500/30 transition-all duration-250 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 max-w-4xl"
+          >
+            <div>
+              <div className="flex items-center gap-3 mb-3">
+                <h3 className="text-2xl font-bold text-white">BharatSaver</h3>
+                <span className="bg-emerald-500/10 text-emerald-400 text-xs font-bold px-2 py-1 rounded uppercase tracking-wider border border-emerald-500/20">
+                  Live
+                </span>
+              </div>
+              <p className="text-[#8B8BAD] text-lg max-w-xl">
+                Financial technology platform providing financial calculators and tools for Indian consumers.
+              </p>
+            </div>
+            <Link
+              href="https://bharatsaver.com/en"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="shrink-0 inline-flex items-center gap-2 bg-transparent border border-[#1C1C2E] hover:border-amber-500/30 text-white font-medium px-6 py-3 rounded-lg transition-all duration-200"
+            >
+              View Project <ArrowRight className="w-4 h-4" />
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* NEW: WHAT HAPPENS AFTER YOU CONTACT US */}
+      <section className="py-24 bg-[#0B0B12]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div {...fadeUp} className="mb-16 text-center">
+            <p className="text-[11px] font-bold uppercase tracking-[0.15em] text-amber-400 mb-3">
+              THE PROCESS
+            </p>
+            <h2 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">
+              What happens after you contact us.
+            </h2>
+            <p className="text-[#8B8BAD] text-lg max-w-2xl mx-auto">
+              You're not entering a sales funnel. You're starting a conversation.
+            </p>
+          </motion.div>
+
+          <div className="flex flex-col md:flex-row gap-6 lg:gap-8 justify-between relative">
+            {/* Connecting Line - desktop only */}
+            <div className="hidden md:block absolute top-[28px] left-[10%] right-[10%] h-[1px] bg-amber-500/20 z-0"></div>
+            
+            {[
+              { title: "30-min conversation", desc: "We understand the problem, not just the technology." },
+              { title: "Workflow analysis", desc: "We map the current process from start to finish." },
+              { title: "Solution proposal", desc: "We recommend AI, automation, integration or custom software." },
+              { title: "Prototype", desc: "We build a focused proof of concept around the highest-value opportunity." },
+              { title: "Production", desc: "We integrate the solution into your business." }
+            ].map((step, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="relative z-10 flex flex-row md:flex-col items-start md:items-center text-left md:text-center gap-4 flex-1"
+              >
+                <div className="w-14 h-14 shrink-0 rounded-full bg-[#13131F] border-2 border-[#1C1C2E] text-amber-400 font-display font-bold text-xl flex items-center justify-center">
+                  0{i + 1}
+                </div>
+                <div>
+                  <h3 className="text-white font-bold mb-2">{step.title}</h3>
+                  <p className="text-[#8B8BAD] text-sm">{step.desc}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 11. FINAL CTA */}
+      <section className="relative py-32 bg-[#0B0B12] overflow-hidden border-t border-[#1C1C2E]">
+        {/* Glow behind CTA */}
+        <div
+          className="absolute inset-0 z-0 opacity-30"
+          style={{
+            backgroundImage: "radial-gradient(circle at center, rgba(99, 102, 241, 0.2), transparent 70%)"
+          }}
+        />
+
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <motion.div {...fadeUp}>
+            <h2 className="font-display text-5xl md:text-6xl font-bold text-white mb-6">
+              Start the Conversation
+            </h2>
+            <p className="text-xl text-[#8B8BAD] mb-12">
+              Tell us about a workflow. We'll tell you if it's automatable.
+            </p>
+            
+            <div className="flex flex-col items-center gap-6">
+              {/* NEW NO OBLIGATION MESSAGING */}
+              <div className="text-[#8B8BAD] italic text-sm space-y-1 mb-2">
+                <p>Not sure what technology you need? That's okay. Start with the problem.</p>
+                <p>We don't expect you to arrive with a technical specification.</p>
+              </div>
+              
+              <Link
+                href="/discuss"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-amber-600 to-orange-700 hover:from-amber-500 hover:to-orange-600 text-white font-semibold px-10 py-5 rounded-lg text-lg transition-all duration-200 hover:shadow-lg hover:shadow-amber-500/25 hover:-translate-y-px"
+              >
+                Discuss Your Business <ArrowRight className="w-5 h-5" />
               </Link>
-              <Link href="/about">
-                <Button variant="outline" size="lg" className="border-2 border-purple-200 text-purple-700 hover:bg-purple-50 px-8 py-4 rounded-xl font-semibold">
-                  Learn More About Us
-                </Button>
+              <Link
+                href="https://calendar.app.google/MLAfP4WQRKfpMoWv6"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#8B8BAD] hover:text-white transition-colors underline underline-offset-4 decoration-[#1C1C2E] hover:decoration-indigo-500/50"
+              >
+                Or book a 30-minute call
               </Link>
             </div>
           </motion.div>
         </div>
       </section>
-    </div>
+    </main>
   );
 }

@@ -1,0 +1,33 @@
+[
+  {
+    "id": "lead_1790090756269_k287e",
+    "submittedAt": "2026-09-22T15:25:56.269Z",
+    "status": "NEW",
+    "opportunityScores": {
+      "volume": 0,
+      "manualEffort": 0,
+      "aiFeasibility": 0,
+      "frequency": 0,
+      "repeatability": 0,
+      "buyerUrgency": 0
+    },
+    "contextFields": {
+      "estimatedAnnualCost": "",
+      "integrationComplexity": 5,
+      "notes": ""
+    },
+    "name": "",
+    "email": "",
+    "company": "",
+    "jobTitle": "",
+    "phone": "",
+    "industry": "",
+    "companySize": "",
+    "workflowArea": "",
+    "processDescription": "",
+    "frequency": "",
+    "monthlyVolume": "",
+    "employees": "",
+    "goals": []
+  }
+]
