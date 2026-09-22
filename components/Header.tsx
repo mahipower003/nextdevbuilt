@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
@@ -43,7 +43,7 @@ export default function Header() {
 
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5 group">
-            <div className="w-7 h-7 rounded-md bg-gradient-to-br from-amber-500 to-orange-700 flex items-center justify-center shadow-lg shadow-amber-500/20 group-hover:shadow-indigo-500/40 transition-all duration-200">
+            <div className="w-7 h-7 rounded-md bg-gradient-to-br from-amber-500 to-orange-700 flex items-center justify-center shadow-lg shadow-amber-500/20 group-hover:shadow-amber-500/40 transition-all duration-200">
               <span className="text-white font-black text-[11px] tracking-tight">N</span>
             </div>
             <span className="font-display font-bold text-[15px] text-white tracking-tight">

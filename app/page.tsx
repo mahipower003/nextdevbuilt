@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -28,7 +28,7 @@ export default function Home() {
         <div
           className="absolute inset-0 z-0 opacity-20"
           style={{
-            backgroundImage: "radial-gradient(circle at center top, rgba(99, 102, 241, 0.4), transparent 60%)"
+            backgroundImage: "radial-gradient(circle at center top, rgba(217, 119, 6, 0.35), transparent 60%)"
           }}
         />
         <div
@@ -266,21 +266,21 @@ export default function Home() {
                   BEFORE
                 </span>
               </div>
-              <div className="flex flex-col lg:flex-row flex-wrap items-center justify-center lg:justify-start gap-2 lg:gap-4 font-mono text-sm">
+              <div className="flex flex-wrap items-center justify-center gap-2 font-mono text-sm">
                 <div className="px-4 py-2 bg-[#1C1C2E] rounded-md text-[#8B8BAD]">Email</div>
-                <ArrowRight className="w-4 h-4 text-[#52526E] hidden lg:block" />
+                <ArrowRight className="w-4 h-4 text-[#52526E]" />
                 <div className="px-4 py-2 bg-[#1C1C2E] rounded-md text-[#8B8BAD]">Excel</div>
-                <ArrowRight className="w-4 h-4 text-[#52526E] hidden lg:block" />
+                <ArrowRight className="w-4 h-4 text-[#52526E]" />
                 <div className="px-4 py-2 bg-[#1C1C2E] rounded-md text-[#8B8BAD]">PDF</div>
-                <ArrowRight className="w-4 h-4 text-[#52526E] hidden lg:block" />
+                <ArrowRight className="w-4 h-4 text-[#52526E]" />
                 <div className="px-4 py-2 bg-red-500/10 border border-red-500/30 text-red-400 rounded-md font-semibold">Human Review</div>
-                <ArrowRight className="w-4 h-4 text-[#52526E] hidden lg:block" />
+                <ArrowRight className="w-4 h-4 text-[#52526E]" />
                 <div className="px-4 py-2 bg-[#1C1C2E] rounded-md text-[#8B8BAD]">ERP</div>
-                <ArrowRight className="w-4 h-4 text-[#52526E] hidden lg:block" />
+                <ArrowRight className="w-4 h-4 text-[#52526E]" />
                 <div className="px-4 py-2 bg-[#1C1C2E] rounded-md text-[#8B8BAD]">Excel</div>
-                <ArrowRight className="w-4 h-4 text-[#52526E] hidden lg:block" />
+                <ArrowRight className="w-4 h-4 text-[#52526E]" />
                 <div className="px-4 py-2 bg-amber-500/10 border border-amber-500/30 text-amber-400 rounded-md font-semibold">Approval</div>
-                <ArrowRight className="w-4 h-4 text-[#52526E] hidden lg:block" />
+                <ArrowRight className="w-4 h-4 text-[#52526E]" />
                 <div className="px-4 py-2 bg-[#1C1C2E] rounded-md text-[#8B8BAD]">Email</div>
               </div>
             </motion.div>
@@ -303,15 +303,15 @@ export default function Home() {
                     AFTER
                   </span>
                 </div>
-                <div className="flex flex-col lg:flex-row flex-wrap items-center justify-center lg:justify-start gap-2 lg:gap-4 font-mono text-sm">
+                <div className="flex flex-wrap items-center justify-center gap-2 font-mono text-sm">
                   <div className="px-4 py-2 bg-amber-500/10 border border-amber-500/30 text-amber-300 rounded-md">Email</div>
-                  <ArrowRight className="w-4 h-4 text-indigo-500/50 hidden lg:block" />
+                  <ArrowRight className="w-4 h-4 text-amber-500/50" />
                   <div className="px-4 py-2 bg-amber-500/10 border border-amber-500/30 text-amber-300 rounded-md font-semibold">AI Processing</div>
-                  <ArrowRight className="w-4 h-4 text-indigo-500/50 hidden lg:block" />
+                  <ArrowRight className="w-4 h-4 text-amber-500/50" />
                   <div className="px-4 py-2 bg-amber-500/10 border border-amber-500/30 text-amber-300 rounded-md font-semibold">Automated Validation</div>
-                  <ArrowRight className="w-4 h-4 text-indigo-500/50 hidden lg:block" />
+                  <ArrowRight className="w-4 h-4 text-amber-500/50" />
                   <div className="px-4 py-2 bg-amber-500/10 border border-amber-500/30 text-amber-300 rounded-md">Exception Review</div>
-                  <ArrowRight className="w-4 h-4 text-indigo-500/50 hidden lg:block" />
+                  <ArrowRight className="w-4 h-4 text-amber-500/50" />
                   <div className="px-4 py-2 bg-amber-500/10 border border-amber-500/30 text-amber-300 rounded-md">ERP</div>
                 </div>
               </div>
@@ -455,7 +455,7 @@ export default function Home() {
                 transition={{ delay: i * 0.1 }}
                 className="relative"
               >
-                <div className="text-3xl font-display font-bold text-indigo-500/40 mb-2">{stage.num}</div>
+                <div className="text-3xl font-display font-bold text-amber-500/40 mb-2">{stage.num}</div>
                 <h3 className="text-xl font-bold text-white mb-3">{stage.name}</h3>
                 <p className="text-[#52526E] leading-relaxed">{stage.desc}</p>
               </motion.div>
@@ -798,7 +798,7 @@ export default function Home() {
         <div
           className="absolute inset-0 z-0 opacity-30"
           style={{
-            backgroundImage: "radial-gradient(circle at center, rgba(99, 102, 241, 0.2), transparent 70%)"
+            backgroundImage: "radial-gradient(circle at center, rgba(217, 119, 6, 0.18), transparent 70%)"
           }}
         />
 
@@ -828,7 +828,7 @@ export default function Home() {
                 href="https://calendar.app.google/MLAfP4WQRKfpMoWv6"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#8B8BAD] hover:text-white transition-colors underline underline-offset-4 decoration-[#1C1C2E] hover:decoration-indigo-500/50"
+                className="text-[#8B8BAD] hover:text-white transition-colors underline underline-offset-4 decoration-[#1C1C2E] hover:decoration-amber-500/50"
               >
                 Or book a 30-minute call
               </Link>

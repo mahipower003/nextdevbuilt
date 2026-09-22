@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -71,11 +71,11 @@ export default function DiscussPage() {
 
   const slideVariants = {
     initial: (d: number) => ({ x: d > 0 ? '40%' : '-40%', opacity: 0 }),
-    active: { x: 0, opacity: 1, transition: { type: 'spring', stiffness: 280, damping: 28 } },
+    active: { x: 0, opacity: 1, transition: { type: 'spring' as const, stiffness: 280, damping: 28 } },
     exit: (d: number) => ({
       x: d < 0 ? '40%' : '-40%',
       opacity: 0,
-      transition: { ease: 'easeInOut', duration: 0.18 },
+      transition: { ease: 'easeInOut' as const, duration: 0.18 },
     }),
   };
 

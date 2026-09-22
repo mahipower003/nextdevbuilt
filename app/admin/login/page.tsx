@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import React, { Suspense } from 'react';
 import { signIn } from 'next-auth/react';
@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 
 function LoginContent() {
   const searchParams = useSearchParams();
-  const error = searchParams.get('error');
+  const error = searchParams?.get('error');
 
   return (
     <div className="min-h-screen bg-[#0B0B12] flex items-center justify-center p-4">
