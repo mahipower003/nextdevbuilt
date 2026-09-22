@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import React, { useEffect, useState } from 'react';
 import { useSession, signOut } from 'next-auth/react';
@@ -133,7 +133,7 @@ export default function LeadsDashboard() {
         <header className="h-16 border-b border-[#1C1C2E] flex items-center justify-between px-6 bg-[#0B0B12] z-10">
           <h1 className="font-display text-xl font-bold text-white">Lead Dashboard</h1>
           <button onClick={fetchLeads} className="p-2 text-[#8B8BAD] hover:text-white rounded-lg hover:bg-[#13131F] transition-colors">
-            <RefreshCcw className={\`w-5 h-5 \${loading ? 'animate-spin' : ''}\`} />
+            <RefreshCcw className={'w-5 h-5' + (loading ? ' animate-spin' : '')} />
           </button>
         </header>
 
@@ -164,14 +164,14 @@ export default function LeadsDashboard() {
                     </td>
                     <td className="px-6 py-4 text-[#F1F1F8]">{lead.workflowArea}</td>
                     <td className="px-6 py-4">
-                      <span className={\`inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold border \${statusColors[lead.status] || 'bg-gray-800 text-gray-300 border-gray-700'}\`}>
+                       <span className={'inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold border ' + (statusColors[lead.status] || 'bg-gray-800 text-gray-300 border-gray-700')}>
                         {lead.status}
                       </span>
                     </td>
                     <td className="px-6 py-4">
                       <div className="flex items-center gap-2">
                         <div className="w-16 h-1.5 bg-[#0B0B12] rounded-full overflow-hidden">
-                          <div className="h-full bg-amber-500 rounded-full" style={{ width: \`\${(calcTotalScore(lead.opportunityScores) / 60) * 100}%\` }} />
+                          <div className="h-full bg-amber-500 rounded-full" style={{ width: ((calcTotalScore(lead.opportunityScores) / 60) * 100) + '%' }} />
                         </div>
                         <span className="text-xs font-medium text-[#8B8BAD]">{calcTotalScore(lead.opportunityScores)}/60</span>
                       </div>
