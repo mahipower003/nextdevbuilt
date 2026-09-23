@@ -50,7 +50,7 @@ export default function WhatWeSolvePage() {
             transition={{ duration: 0.5 }}
           >
             <p className="text-[11px] font-bold uppercase tracking-[0.15em] text-amber-400 mb-4">Automation Solutions</p>
-            <h1 className="font-display text-5xl md:text-6xl font-bold text-white mb-6">What We Automate.</h1>
+            <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">What We Automate.</h1>
             <p className="text-[#8B8BAD] text-xl max-w-2xl">
               We don&apos;t start with a technology. We start with a business problem.
             </p>
@@ -69,7 +69,7 @@ export default function WhatWeSolvePage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1, duration: 0.5 }}
-                className="bg-[#13131F] border border-[#1C1C2E] rounded-xl p-8 hover:bg-[#17172A] hover:border-amber-500/30 transition-all duration-250 group flex flex-col md:flex-row gap-8 items-start"
+                className="bg-[#13131F] border border-[#1C1C2E] rounded-xl p-5 sm:p-6 md:p-8 hover:bg-[#17172A] hover:border-amber-500/30 transition-all duration-250 group flex flex-col md:flex-row gap-4 sm:gap-6 md:gap-8 items-start"
               >
                 <div className="flex-shrink-0 w-16 h-16 bg-amber-500/10 rounded-lg flex items-center justify-center border border-amber-500/20 group-hover:border-amber-500/40 transition-colors">
                   <solution.icon className="w-8 h-8 text-amber-400" />
@@ -109,9 +109,9 @@ export default function WhatWeSolvePage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="bg-[#13131F] border border-[#1C1C2E] rounded-2xl p-12 md:p-16 flex flex-col items-center max-w-4xl mx-auto"
+            className="bg-[#13131F] border border-[#1C1C2E] rounded-2xl p-6 sm:p-10 md:p-16 flex flex-col items-center max-w-4xl mx-auto"
           >
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-white mb-6">Ready to discuss a specific workflow?</h2>
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">Ready to discuss a specific workflow?</h2>
             <Link 
               href="/discuss"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-amber-600 to-orange-700 hover:from-amber-500 hover:to-orange-600 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-200 hover:shadow-lg hover:shadow-amber-500/25 hover:-translate-y-px"

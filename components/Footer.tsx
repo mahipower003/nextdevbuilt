@@ -22,7 +22,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#0B0B12] border-t border-[#1C1C2E]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
 
           {/* Brand */}
           <div className="md:col-span-1">
@@ -107,7 +107,7 @@ export default function Footer() {
                 <Mail className="w-4 h-4 shrink-0" />
                 <a
                   href="mailto:maheshchaube333@gmail.com"
-                  className="hover:text-white transition-colors duration-200"
+                  className="hover:text-white transition-colors duration-200 break-all"
                 >
                   maheshchaube333@gmail.com
                 </a>
@@ -121,10 +121,10 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-[#1C1C2E] mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-[#52526E] text-xs">
+          <p className="text-[#52526E] text-xs text-center sm:text-left">
             © {new Date().getFullYear()} NextDevBuild. All rights reserved.
           </p>
-          <p className="text-[#52526E] text-xs">AI Workflow Engineering · Mumbai, India</p>
+          <p className="text-[#52526E] text-xs text-center sm:text-left">AI Workflow Engineering · Mumbai, India</p>
         </div>
       </div>
     </footer>

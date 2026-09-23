@@ -97,7 +97,7 @@ export default function InsightsPage() {
             <p className="text-[11px] font-bold uppercase tracking-[0.15em] text-amber-400 mb-4">
               Insights
             </p>
-            <h1 className="font-display text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
+            <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
               Thinking about{' '}
               <span className="bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">
                 business automation.
@@ -113,7 +113,7 @@ export default function InsightsPage() {
 
       {/* Notice bar */}
       <div className="border-t border-b border-[#1C1C2E] bg-[#0D0D16]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center gap-3">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-start sm:items-center gap-3">
           <BookOpen className="w-4 h-4 text-amber-400 shrink-0" />
           <p className="text-[#8B8BAD] text-sm">
             These articles are being written based on real workflow discovery conversations.{' '}
@@ -186,7 +186,7 @@ export default function InsightsPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="mt-16 bg-[#13131F] border border-[#1C1C2E] rounded-2xl p-8 md:p-12 text-center"
+            className="mt-16 bg-[#13131F] border border-[#1C1C2E] rounded-2xl p-6 sm:p-8 md:p-12 text-center"
           >
             <p className="text-[11px] font-bold uppercase tracking-[0.15em] text-amber-400 mb-3">
               Stay informed
@@ -201,7 +201,7 @@ export default function InsightsPage() {
             </p>
             <a
               href="mailto:maheshchaube333@gmail.com?subject=Notify me about NextDevBuild Insights"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-amber-600 to-orange-700 hover:from-amber-500 hover:to-orange-600 text-white font-semibold px-7 py-3.5 rounded-lg transition-all duration-200 hover:shadow-lg hover:shadow-amber-500/25 hover:-translate-y-px"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-amber-600 to-orange-700 hover:from-amber-500 hover:to-orange-600 text-white font-semibold px-7 py-3.5 rounded-lg transition-all duration-200 hover:shadow-lg hover:shadow-amber-500/25 hover:-translate-y-px w-full sm:w-auto justify-center"
             >
               Notify me when published
               <ArrowRight className="w-4 h-4" />
@@ -232,19 +232,21 @@ export default function InsightsPage() {
               conversations with finance and operations teams — what they actually do every
               day, why they do it manually, and what it would actually take to change that.
             </p>
-            <div className="flex items-center gap-4">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-amber-500 to-orange-700 flex items-center justify-center text-white font-bold text-sm shrink-0">
-                MC
-              </div>
-              <div>
-                <p className="text-white font-semibold text-sm">Mahesh Chaube</p>
-                <p className="text-[#52526E] text-sm">Founder, NextDevBuild</p>
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div className="flex items-center gap-4">
+                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-amber-500 to-orange-700 flex items-center justify-center text-white font-bold text-sm shrink-0">
+                  MC
+                </div>
+                <div>
+                  <p className="text-white font-semibold text-sm">Mahesh Chaube</p>
+                  <p className="text-[#52526E] text-sm">Founder, NextDevBuild</p>
+                </div>
               </div>
               <a
                 href="https://www.linkedin.com/in/mahi003/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="ml-auto inline-flex items-center gap-1.5 text-amber-400 hover:text-amber-300 text-sm font-medium transition-colors"
+                className="inline-flex items-center gap-1.5 text-amber-400 hover:text-amber-300 text-sm font-medium transition-colors"
               >
                 Connect on LinkedIn
                 <ArrowRight className="w-3.5 h-3.5" />

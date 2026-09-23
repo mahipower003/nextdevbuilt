@@ -25,7 +25,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-[#0B0B12] selection:bg-amber-500/30">
       {/* 1. HERO SECTION */}
-      <section className="relative min-h-screen pt-[120px] pb-24 overflow-hidden flex flex-col justify-center">
+      <section className="relative min-h-screen pt-28 md:pt-[120px] pb-16 md:pb-24 overflow-hidden flex flex-col justify-center">
         <div className="absolute inset-0 z-0 bg-[#0B0B12]" />
         <div
           className="absolute inset-0 z-0 opacity-20"
@@ -54,11 +54,11 @@ export default function Home() {
               </span>
             </div>
 
-            <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight">
+            <h1 className="font-display text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight">
               Turn Expensive Manual Work Into Intelligent Software.
             </h1>
 
-            <p className="text-[#8B8BAD] text-xl mb-10 max-w-2xl leading-relaxed">
+            <p className="text-[#8B8BAD] text-base sm:text-lg md:text-xl mb-8 sm:mb-10 max-w-2xl leading-relaxed">
               We help businesses identify repetitive financial and operational workflows, then design and build AI-powered systems to automate them.
             </p>
 
@@ -87,20 +87,20 @@ export default function Home() {
       </section>
 
       {/* 2. PROBLEM SECTION */}
-      <section className="py-24 bg-[#0D0D16] border-t border-[#1C1C2E]">
+      <section className="py-14 sm:py-20 md:py-24 bg-[#0D0D16] border-t border-[#1C1C2E]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <motion.div {...fadeUp}>
               <p className="text-[11px] font-bold uppercase tracking-[0.15em] text-amber-400 mb-3">
                 THE REALITY
               </p>
-              <h2 className="font-display text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
+              <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
                 Your business may already have enough software.
               </h2>
               <p className="text-[#8B8BAD] text-lg mb-8">
                 The problem is what's happening between the software.
               </p>
-              <blockquote className="border-l-2 border-amber-500 pl-6 mb-8 text-xl text-white font-medium italic">
+              <blockquote className="border-l-2 border-amber-500 pl-4 sm:pl-6 mb-6 sm:mb-8 text-lg sm:text-xl text-white font-medium italic">
                 "Every manual handoff creates cost, delay and opportunity for error."
               </blockquote>
               <Link
@@ -175,13 +175,13 @@ export default function Home() {
       </section>
 
       {/* 3. PAIN POINTS */}
-      <section className="py-24 bg-[#0B0B12]">
+      <section className="py-14 sm:py-20 md:py-24 bg-[#0B0B12] border-t border-[#1C1C2E]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div {...fadeUp} className="mb-16 text-center">
             <p className="text-[11px] font-bold uppercase tracking-[0.15em] text-amber-400 mb-3">
               WHAT KEEPS YOUR TEAM BUSY
             </p>
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
               What keeps your operations team busy?
             </h2>
           </motion.div>
@@ -248,13 +248,13 @@ export default function Home() {
       </section>
 
       {/* NEW: BEFORE -> AFTER SECTION */}
-      <section className="py-24 bg-[#0D0D16] border-t border-[#1C1C2E]">
+      <section className="py-14 sm:py-20 md:py-24 bg-[#0D0D16] border-t border-[#1C1C2E]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div {...fadeUp} className="mb-16 text-center">
             <p className="text-[11px] font-bold uppercase tracking-[0.15em] text-amber-400 mb-3">
               THE TRANSFORMATION
             </p>
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
               Same business process. Less manual work.
             </h2>
           </motion.div>
@@ -329,13 +329,13 @@ export default function Home() {
       </section>
 
       {/* NEW: BUSINESS PROBLEMS WE SOLVE */}
-      <section className="py-24 bg-[#0B0B12]">
+      <section className="py-14 sm:py-20 md:py-24 bg-[#0B0B12] border-t border-[#1C1C2E]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div {...fadeUp} className="mb-16 text-center">
             <p className="text-[11px] font-bold uppercase tracking-[0.15em] text-amber-400 mb-3">
               PROBLEMS WE SOLVE
             </p>
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
               We solve business problems. Not technology problems.
             </h2>
             <p className="text-[#8B8BAD] text-lg max-w-2xl mx-auto">
@@ -410,10 +410,10 @@ export default function Home() {
       </section>
 
       {/* 4. KEY SALES SECTION */}
-      <section className="py-28 bg-[#0D0D16] border-y border-[#1C1C2E] text-center">
+      <section className="py-16 sm:py-20 md:py-28 bg-[#0D0D16] border-y border-[#1C1C2E] text-center">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
           <motion.div {...fadeUp}>
-            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-6 sm:mb-8 leading-tight">
               Tell us what your team spends too much time doing.
             </h2>
             <div className="text-xl text-[#8B8BAD] space-y-6 mb-12 max-w-2xl mx-auto">
@@ -422,7 +422,7 @@ export default function Home() {
             </div>
             <Link
               href="/discuss"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-amber-600 to-orange-700 hover:from-amber-500 hover:to-orange-600 text-white font-semibold px-10 py-5 rounded-lg text-lg transition-all duration-200 hover:shadow-lg hover:shadow-amber-500/25 hover:-translate-y-px"
+              className="w-full sm:w-auto inline-flex justify-center items-center gap-2 bg-gradient-to-r from-amber-600 to-orange-700 hover:from-amber-500 hover:to-orange-600 text-white font-semibold px-6 sm:px-10 py-4 sm:py-5 rounded-lg text-base sm:text-lg transition-all duration-200 hover:shadow-lg hover:shadow-amber-500/25 hover:-translate-y-px"
             >
               Discuss a Workflow <ArrowRight className="w-5 h-5" />
             </Link>
@@ -431,13 +431,13 @@ export default function Home() {
       </section>
 
       {/* 5. HOW WE WORK */}
-      <section className="py-24 bg-[#0B0B12]">
+      <section className="py-14 sm:py-20 md:py-24 bg-[#0B0B12] border-t border-[#1C1C2E]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div {...fadeUp} className="mb-16 text-center md:text-left">
             <p className="text-[11px] font-bold uppercase tracking-[0.15em] text-amber-400 mb-3">
               OUR PROCESS
             </p>
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-white max-w-3xl">
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white max-w-3xl">
               We don't start with technology. We start with the business problem.
             </h2>
           </motion.div>
@@ -469,13 +469,13 @@ export default function Home() {
       </section>
 
       {/* NEW: BUILD vs BUY vs AUTOMATE vs AI */}
-      <section className="py-24 bg-[#0D0D16] border-t border-[#1C1C2E]">
+      <section className="py-14 sm:py-20 md:py-24 bg-[#0D0D16] border-t border-[#1C1C2E]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div {...fadeUp} className="mb-16 text-center">
             <p className="text-[11px] font-bold uppercase tracking-[0.15em] text-amber-400 mb-3">
               OUR APPROACH
             </p>
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
               Sometimes the answer isn't custom software.
             </h2>
             <p className="text-[#8B8BAD] text-lg max-w-2xl mx-auto">
@@ -518,13 +518,13 @@ export default function Home() {
       </section>
 
       {/* NEW SECTION: WHY TALK TO US */}
-      <section className="py-24 bg-[#0B0B12] border-t border-[#1C1C2E]">
+      <section className="py-14 sm:py-20 md:py-24 bg-[#0B0B12] border-t border-[#1C1C2E]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div {...fadeUp} className="mb-16 text-center">
             <p className="text-[11px] font-bold uppercase tracking-[0.15em] text-amber-400 mb-3">
               WHY TALK TO US
             </p>
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-white">
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white">
               Why businesses work with NextDevBuild
             </h2>
           </motion.div>
@@ -571,13 +571,13 @@ export default function Home() {
       </section>
 
       {/* NEW: ENTERPRISE READINESS */}
-      <section className="py-24 bg-[#0B0B12]">
+      <section className="py-14 sm:py-20 md:py-24 bg-[#0D0D16] border-y border-[#1C1C2E]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div {...fadeUp} className="mb-12">
             <p className="text-[11px] font-bold uppercase tracking-[0.15em] text-amber-400 mb-3">
               BUILT FOR BUSINESS
             </p>
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-white">
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white">
               Built for business environments.
             </h2>
           </motion.div>
@@ -618,13 +618,13 @@ export default function Home() {
       </section>
 
       {/* 6. TRUST SECTION */}
-      <section className="py-28 bg-[#0D0D16] text-center border-y border-[#1C1C2E]">
+      <section className="py-16 sm:py-20 md:py-28 bg-[#0D0D16] text-center border-y border-[#1C1C2E]">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div {...fadeUp}>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6">
               Sometimes AI isn't the answer.
             </h2>
-            <p className="text-[#8B8BAD] text-xl leading-relaxed">
+            <p className="text-[#8B8BAD] text-base sm:text-lg md:text-xl leading-relaxed">
               We don't recommend AI simply because it's fashionable. Sometimes the right solution is a workflow change, API integration, traditional automation or better software. We choose the technology based on the business problem.
             </p>
           </motion.div>
@@ -632,13 +632,13 @@ export default function Home() {
       </section>
 
       {/* 7. FOR EXECUTIVES */}
-      <section className="py-24 bg-[#0B0B12]">
+      <section className="py-14 sm:py-20 md:py-24 bg-[#0B0B12]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div {...fadeUp} className="mb-16 text-center">
             <p className="text-[11px] font-bold uppercase tracking-[0.15em] text-amber-400 mb-3">
               BUILT FOR DECISION MAKERS
             </p>
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-white max-w-2xl mx-auto mb-4">
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white max-w-2xl mx-auto mb-4">
               Built for people responsible for the business — not just the technology.
             </h2>
           </motion.div>
@@ -682,7 +682,7 @@ export default function Home() {
               href="https://www.linkedin.com/in/mahesh-chaube-3075b8226/"
               target="_blank"
               rel="noopener noreferrer"
-              className="shrink-0 inline-flex items-center gap-2 bg-amber-500/10 border border-amber-500/30 hover:border-amber-500 text-amber-300 hover:text-white font-semibold px-6 py-3 rounded-lg transition-all text-sm"
+              className="w-full sm:w-auto justify-center inline-flex items-center gap-2 bg-amber-500/10 border border-amber-500/30 hover:border-amber-500 text-amber-300 hover:text-white font-semibold px-6 py-3 rounded-lg transition-all text-sm"
             >
               <Linkedin className="w-4 h-4 text-amber-400" /> LinkedIn <ExternalLink className="w-3.5 h-3.5" />
             </a>
@@ -691,13 +691,13 @@ export default function Home() {
       </section>
 
       {/* 8. ROI ECONOMICS */}
-      <section className="py-24 bg-[#0D0D16] border-y border-[#1C1C2E]">
+      <section className="py-14 sm:py-20 md:py-24 bg-[#0D0D16] border-y border-[#1C1C2E]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div {...fadeUp} className="text-center mb-16">
             <p className="text-[11px] font-bold uppercase tracking-[0.15em] text-amber-400 mb-3">
               THE ECONOMICS
             </p>
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-white">
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white">
               Before we build anything, we want to understand the economics.
             </h2>
           </motion.div>
@@ -745,13 +745,13 @@ export default function Home() {
       </section>
 
       {/* 9. TECH CREDIBILITY */}
-      <section className="py-24 bg-[#0B0B12]">
+      <section className="py-14 sm:py-20 md:py-24 bg-[#0B0B12]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div {...fadeUp} className="mb-12">
             <p className="text-[11px] font-bold uppercase tracking-[0.15em] text-amber-400 mb-3">
               ENGINEERING
             </p>
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-white">
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white">
               Built on enterprise-grade engineering.
             </h2>
           </motion.div>
@@ -788,13 +788,13 @@ export default function Home() {
       </section>
 
       {/* 10. SELECTED WORK */}
-      <section className="py-24 bg-[#0D0D16] border-y border-[#1C1C2E]">
+      <section className="py-14 sm:py-20 md:py-24 bg-[#0D0D16] border-y border-[#1C1C2E]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div {...fadeUp} className="mb-16">
             <p className="text-[11px] font-bold uppercase tracking-[0.15em] text-amber-400 mb-3">
               SELECTED WORK
             </p>
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-white">
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white">
               What we've built.
             </h2>
           </motion.div>
@@ -804,7 +804,7 @@ export default function Home() {
             className="bg-[#13131F] border border-[#1C1C2E] rounded-xl p-8 hover:bg-[#17172A] hover:border-amber-500/30 transition-all duration-250 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 max-w-4xl"
           >
             <div className="w-full">
-              <div className="flex items-center gap-3 mb-2">
+              <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-2">
                 <h3 className="text-2xl font-bold text-white">BharatSaver</h3>
                 <span className="bg-emerald-500/10 text-emerald-400 text-xs font-bold px-2 py-1 rounded uppercase tracking-wider border border-emerald-500/20">
                   Live
@@ -844,13 +844,13 @@ export default function Home() {
       </section>
 
       {/* NEW: WHAT HAPPENS AFTER YOU CONTACT US */}
-      <section className="py-24 bg-[#0B0B12]">
+      <section className="py-14 sm:py-20 md:py-24 bg-[#0B0B12] border-t border-[#1C1C2E]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div {...fadeUp} className="mb-16 text-center">
             <p className="text-[11px] font-bold uppercase tracking-[0.15em] text-amber-400 mb-3">
               THE PROCESS
             </p>
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
               What happens after you contact us.
             </h2>
             <p className="text-[#8B8BAD] text-lg max-w-2xl mx-auto">
@@ -891,7 +891,7 @@ export default function Home() {
       </section>
 
       {/* 11. FINAL CTA */}
-      <section className="relative py-32 bg-[#0B0B12] overflow-hidden border-t border-[#1C1C2E]">
+      <section className="relative py-16 sm:py-24 md:py-32 bg-[#0D0D16] overflow-hidden border-t border-[#1C1C2E]">
         {/* Glow behind CTA */}
         <div
           className="absolute inset-0 z-0 opacity-30"
@@ -902,10 +902,10 @@ export default function Home() {
 
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <motion.div {...fadeUp}>
-            <h2 className="font-display text-5xl md:text-6xl font-bold text-white mb-6">
+            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
               Start the Conversation
             </h2>
-            <p className="text-xl text-[#8B8BAD] mb-12">
+            <p className="text-base sm:text-lg md:text-xl text-[#8B8BAD] mb-8 sm:mb-12">
               Tell us about a workflow. We'll tell you if it's automatable.
             </p>
             
@@ -918,7 +918,7 @@ export default function Home() {
               
               <Link
                 href="/discuss"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-amber-600 to-orange-700 hover:from-amber-500 hover:to-orange-600 text-white font-semibold px-10 py-5 rounded-lg text-lg transition-all duration-200 hover:shadow-lg hover:shadow-amber-500/25 hover:-translate-y-px"
+                className="w-full sm:w-auto inline-flex justify-center items-center gap-2 bg-gradient-to-r from-amber-600 to-orange-700 hover:from-amber-500 hover:to-orange-600 text-white font-semibold px-6 sm:px-10 py-4 sm:py-5 rounded-lg text-base sm:text-lg transition-all duration-200 hover:shadow-lg hover:shadow-amber-500/25 hover:-translate-y-px"
               >
                 Discuss a Workflow <ArrowRight className="w-5 h-5" />
               </Link>
@@ -926,7 +926,7 @@ export default function Home() {
                 href="https://calendar.app.google/MLAfP4WQRKfpMoWv6"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 border border-[#1C1C2E] hover:border-amber-500/30 bg-transparent text-white font-semibold px-8 py-4 rounded-lg transition-all duration-200 hover:bg-[#13131F]"
+                className="w-full sm:w-auto inline-flex justify-center items-center gap-2 border border-[#1C1C2E] hover:border-amber-500/30 bg-transparent text-white font-semibold px-6 sm:px-8 py-3.5 sm:py-4 rounded-lg transition-all duration-200 hover:bg-[#13131F]"
               >
                 Book a 30-Minute Call <ArrowRight className="w-4 h-4 text-amber-400" />
               </a>

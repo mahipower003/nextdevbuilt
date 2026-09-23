@@ -49,7 +49,7 @@ export default function HowItWorksPage() {
             transition={{ duration: 0.5 }}
           >
             <p className="text-[11px] font-bold uppercase tracking-[0.15em] text-amber-400 mb-4">Our Process</p>
-            <h1 className="font-display text-5xl md:text-6xl font-bold text-white mb-6">How We Work.</h1>
+            <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">How We Work.</h1>
             <p className="text-[#8B8BAD] text-xl max-w-2xl">
               We don&apos;t start with technology. We start with the business problem.
             </p>
@@ -60,7 +60,7 @@ export default function HowItWorksPage() {
       {/* Timeline Section */}
       <section className="py-24 bg-[#0D0D16]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="relative border-l-2 border-[#1C1C2E] ml-6 md:ml-8 pl-8 md:pl-12 space-y-16">
+          <div className="relative border-l-2 border-[#1C1C2E] ml-4 sm:ml-6 md:ml-8 pl-6 sm:pl-8 md:pl-12 space-y-12 sm:space-y-16">
             {stages.map((stage, index) => (
               <motion.div
                 key={stage.num}
@@ -71,11 +71,11 @@ export default function HowItWorksPage() {
                 className="relative"
               >
                 {/* Timeline Dot */}
-                <div className="absolute -left-[58px] md:-left-[74px] top-1 w-12 h-12 bg-[#13131F] border-2 border-amber-500 rounded-full flex items-center justify-center font-display font-bold text-amber-400 z-10 shadow-[0_0_15px_rgba(217,119,6,0.2)]">
+                <div className="absolute -left-[46px] sm:-left-[58px] md:-left-[74px] top-1 w-10 h-10 sm:w-12 sm:h-12 bg-[#13131F] border-2 border-amber-500 rounded-full flex items-center justify-center font-display font-bold text-amber-400 text-sm sm:text-base z-10 shadow-[0_0_15px_rgba(217,119,6,0.2)]">
                   {stage.num}
                 </div>
                 
-                <h3 className="font-display text-3xl font-bold text-white mb-3">{stage.title}</h3>
+                <h3 className="font-display text-2xl sm:text-3xl font-bold text-white mb-3">{stage.title}</h3>
                 <p className="text-[#8B8BAD] text-lg max-w-xl">{stage.description}</p>
               </motion.div>
             ))}
@@ -91,7 +91,7 @@ export default function HowItWorksPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="bg-[#13131F] border border-[#1C1C2E] rounded-2xl p-8 md:p-12"
+            className="bg-[#13131F] border border-[#1C1C2E] rounded-2xl p-5 sm:p-8 md:p-12"
           >
             <div className="flex items-center gap-3 mb-8">
               <Calculator className="w-8 h-8 text-amber-400" />
@@ -103,12 +103,12 @@ export default function HowItWorksPage() {
                 <span className="text-white text-lg font-bold mb-2">Volume</span>
                 <span className="text-sm">Monthly transactions</span>
               </div>
-              <div className="text-2xl hidden md:block text-[#52526E]">×</div>
+              <div className="text-xl block text-center md:text-2xl text-[#52526E] py-2 md:py-0">×</div>
               <div className="bg-[#0B0B12] border border-[#1C1C2E] rounded-lg p-6 flex flex-col justify-center h-full">
                 <span className="text-white text-lg font-bold mb-2">Time</span>
                 <span className="text-sm">Per transaction</span>
               </div>
-              <div className="text-2xl hidden md:block text-[#52526E]">×</div>
+              <div className="text-xl block text-center md:text-2xl text-[#52526E] py-2 md:py-0">×</div>
               <div className="bg-[#0B0B12] border border-[#1C1C2E] rounded-lg p-6 flex flex-col justify-center h-full">
                 <span className="text-white text-lg font-bold mb-2">People & Cost</span>
                 <span className="text-sm">Team involved × Hourly rate</span>
@@ -116,7 +116,7 @@ export default function HowItWorksPage() {
             </div>
             
             <div className="mt-6 p-6 bg-amber-500/10 border border-amber-500/20 rounded-lg text-center">
-              <span className="text-2xl md:text-3xl font-display font-bold text-amber-400">
+              <span className="text-lg sm:text-2xl md:text-3xl font-display font-bold text-amber-400">
                 = Manual Process Cost
               </span>
             </div>

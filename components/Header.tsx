@@ -84,7 +84,7 @@ export default function Header() {
 
           {/* Mobile toggle */}
           <button
-            className="md:hidden text-[#8B8BAD] hover:text-white transition-colors p-1"
+            className="md:hidden text-[#8B8BAD] hover:text-white transition-colors p-2 min-h-[44px] min-w-[44px] flex items-center justify-center"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
@@ -101,7 +101,7 @@ export default function Header() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.22 }}
-            className="md:hidden overflow-hidden bg-[#0B0B12] border-b border-[#1C1C2E]"
+            className="md:hidden overflow-hidden bg-[#0B0B12] border-b border-[#1C1C2E] max-h-[calc(100dvh-68px)] overflow-y-auto"
           >
             <div className="px-4 py-4 space-y-1">
               {navigation.map((item) => {

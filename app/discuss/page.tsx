@@ -80,7 +80,7 @@ export default function DiscussPage() {
   };
 
   const pillBtn = (active: boolean) =>
-    `px-4 py-3 rounded-lg border text-sm transition-all duration-200 ${
+    `px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border text-xs sm:text-sm transition-all duration-200 ${
       active
         ? 'bg-amber-500/10 border-amber-500 text-amber-300'
         : 'bg-[#0B0B12] border-[#1C1C2E] text-[#8B8BAD] hover:border-amber-500/30 hover:text-white'
@@ -94,7 +94,7 @@ export default function DiscussPage() {
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="bg-[#13131F] border border-[#1C1C2E] rounded-2xl p-10 text-center"
+            className="bg-[#13131F] border border-[#1C1C2E] rounded-2xl p-6 sm:p-10 text-center"
           >
             <div className="w-16 h-16 bg-amber-500/10 rounded-full flex items-center justify-center mx-auto mb-6 ring-4 ring-amber-500/10">
               <CheckCircle2 className="w-8 h-8 text-amber-400" />
@@ -112,7 +112,7 @@ export default function DiscussPage() {
               href="https://calendar.app.google/MLAfP4WQRKfpMoWv6"
               target="_blank"
               rel="noopener noreferrer"
-              className="block bg-gradient-to-r from-amber-600 to-orange-700 hover:from-amber-500 hover:to-orange-600 text-white p-7 rounded-xl transition-all duration-200 hover:shadow-xl hover:shadow-amber-500/30 hover:-translate-y-px mb-5 text-left relative overflow-hidden group"
+              className="block bg-gradient-to-r from-amber-600 to-orange-700 hover:from-amber-500 hover:to-orange-600 text-white p-5 sm:p-7 rounded-xl transition-all duration-200 hover:shadow-xl hover:shadow-amber-500/30 hover:-translate-y-px mb-5 text-left relative overflow-hidden group"
             >
               <div className="absolute right-4 top-1/2 -translate-y-1/2 opacity-10 group-hover:opacity-20 transition-opacity">
                 <Calendar className="w-28 h-28" />
@@ -120,7 +120,7 @@ export default function DiscussPage() {
               <p className="text-amber-200 text-xs font-bold uppercase tracking-[0.12em] mb-2 relative z-10">
                 Recommended next step
               </p>
-              <p className="text-2xl font-bold mb-1.5 relative z-10">
+              <p className="text-xl sm:text-2xl font-bold mb-1.5 relative z-10">
                 Book a 30-minute conversation
               </p>
               <div className="flex items-center gap-2 text-amber-100 text-sm relative z-10">
@@ -152,7 +152,7 @@ export default function DiscussPage() {
           <p className="text-[11px] font-bold uppercase tracking-[0.15em] text-amber-400 mb-3">
             Workflow Assessment
           </p>
-          <h1 className="font-display text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
+          <h1 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
             What is your team doing manually
             <br className="hidden md:block" /> that it shouldn&apos;t be?
           </h1>
@@ -226,7 +226,7 @@ export default function DiscussPage() {
           ))}
         </div>
 
-        <div className="bg-[#13131F] border border-[#1C1C2E] rounded-2xl p-8 md:p-10 min-h-[420px] flex flex-col overflow-hidden">
+        <div className="bg-[#13131F] border border-[#1C1C2E] rounded-2xl p-5 sm:p-8 md:p-10 min-h-[420px] flex flex-col overflow-hidden">
           <AnimatePresence mode="wait" custom={direction}>
             <motion.div
               key={step}
@@ -337,7 +337,7 @@ export default function DiscussPage() {
                   <p className="text-[#8B8BAD] text-sm mb-4">
                     Which department owns this manual process?
                   </p>
-                  <div className="grid grid-cols-2 gap-3">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3">
                     {[
                       'Finance',
                       'Operations',
@@ -422,7 +422,7 @@ export default function DiscussPage() {
                     <label className="block text-sm font-medium text-[#8B8BAD] mb-3">
                       How many employees are involved?
                     </label>
-                    <div className="grid grid-cols-4 gap-3">
+                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                       {['1–5', '5–20', '20–50', '50+'].map((emp) => (
                         <button
                           key={emp}
@@ -476,7 +476,7 @@ export default function DiscussPage() {
           </AnimatePresence>
 
           {/* Nav */}
-          <div className="mt-8 pt-6 border-t border-[#1C1C2E] flex items-center justify-between gap-4">
+          <div className="mt-8 pt-6 border-t border-[#1C1C2E] flex flex-col-reverse sm:flex-row items-stretch sm:items-center justify-between gap-3 sm:gap-4">
             {step > 1 ? (
               <button
                 onClick={prevStep}
@@ -505,7 +505,7 @@ export default function DiscussPage() {
                 <button
                   onClick={handleSubmit}
                   disabled={isSubmitting}
-                  className="inline-flex items-center gap-2 bg-gradient-to-r from-amber-600 to-orange-700 hover:from-amber-500 hover:to-orange-600 text-white font-semibold px-8 py-3 rounded-lg transition-all duration-200 hover:shadow-lg hover:shadow-amber-500/20 disabled:opacity-60"
+                  className="inline-flex items-center gap-2 bg-gradient-to-r from-amber-600 to-orange-700 hover:from-amber-500 hover:to-orange-600 text-white font-semibold px-8 py-3 rounded-lg transition-all duration-200 hover:shadow-lg hover:shadow-amber-500/20 disabled:opacity-60 w-full sm:w-auto justify-center"
                 >
                   {isSubmitting ? 'Submitting…' : 'Start the Conversation'}
                   <ArrowRight className="w-5 h-5" />

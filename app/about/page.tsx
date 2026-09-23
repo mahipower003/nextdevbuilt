@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
@@ -16,7 +16,7 @@ export default function AboutPage() {
             transition={{ duration: 0.5 }}
           >
             <p className="text-[11px] font-bold uppercase tracking-[0.15em] text-amber-400 mb-4">About Us</p>
-            <h1 className="font-display text-4xl md:text-5xl font-bold text-white max-w-3xl leading-tight">
+            <h1 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white max-w-3xl leading-tight">
               We build software around real business problems.
             </h1>
           </motion.div>
@@ -31,7 +31,7 @@ export default function AboutPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="max-w-3xl text-xl text-[#8B8BAD] leading-relaxed space-y-6"
+            className="max-w-3xl text-base sm:text-lg md:text-xl text-[#8B8BAD] leading-relaxed space-y-6"
           >
             <p>
               NextDevBuild was created with a simple idea: businesses don&apos;t need more technology for the sake of technology.
@@ -54,7 +54,7 @@ export default function AboutPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="bg-[#13131F] border border-[#1C1C2E] rounded-2xl p-8 md:p-12 max-w-4xl flex flex-col md:flex-row gap-10 items-center"
+            className="bg-[#13131F] border border-[#1C1C2E] rounded-2xl p-5 sm:p-8 md:p-12 max-w-4xl flex flex-col md:flex-row gap-6 md:gap-10 items-center"
           >
             <div className="flex-shrink-0 w-32 h-32 rounded-full bg-gradient-to-br from-amber-500 to-orange-700 p-1">
               <div className="w-full h-full bg-[#13131F] rounded-full flex items-center justify-center">
@@ -63,7 +63,7 @@ export default function AboutPage() {
             </div>
             
             <div>
-              <h2 className="font-display text-3xl font-bold text-white mb-1">Mahesh Chaube</h2>
+              <h2 className="font-display text-2xl sm:text-3xl font-bold text-white mb-1">Mahesh Chaube</h2>
               <p className="text-amber-400 font-medium mb-4">Founder, NextDevBuild</p>
               <p className="text-[#8B8BAD] text-lg mb-6 leading-relaxed">
                 Software engineer and technology builder with experience across enterprise software, cloud infrastructure, data engineering and financial technology.
@@ -86,7 +86,7 @@ export default function AboutPage() {
       <section className="py-24 bg-[#0D0D16]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-[11px] font-bold uppercase tracking-[0.15em] text-amber-400 mb-8">Our Approach</p>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
             {[
               "We identify the workflow before recommending a solution.",
               "We quantify the economics before starting a build.",
@@ -98,7 +98,7 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1, duration: 0.5 }}
-                className="bg-[#13131F] border border-[#1C1C2E] rounded-xl p-8"
+                className="bg-[#13131F] border border-[#1C1C2E] rounded-xl p-5 sm:p-8"
               >
                 <p className="text-white text-lg font-medium leading-relaxed">{value}</p>
               </motion.div>
